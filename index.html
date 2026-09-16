@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USMAN SHAH // Software Engineer • Computer Scientist</title>
+  <meta name="description" content="Official portfolio of Usman Shah — Software Engineer specializing in Web Development, Mobile App Development, Python Architecture, and Productivity Systems." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet (File 2) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Dynamic Cyber Particle Canvas Background -->
+  <canvas id="cyber-canvas"></canvas>
+  <div class="cyber-grid-overlay"></div>
+
+  <!-- Ambient Lighting Elements -->
+  <div class="ambient-glow" style="top: 10%; left: 15%; width: 500px; height: 500px; background: rgba(0, 240, 255, 0.06);"></div>
+  <div class="ambient-glow" style="top: 40%; right: 10%; width: 600px; height: 600px; background: rgba(168, 85, 247, 0.06);"></div>
+  <div class="ambient-glow" style="top: 70%; left: 30%; width: 550px; height: 550px; background: rgba(16, 185, 129, 0.05);"></div>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-text-title">USMAN SHAH</div>
+          <div class="brand-text-sub">CS // ENGINEER</div>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home" class="nav-item active">HOME</a>
+        <a href="#about" class="nav-item">ABOUT</a>
+        <a href="#skills" class="nav-item">SKILLS</a>
+        <a href="#projects" class="nav-item">PROJECTS</a>
+        <a href="#experience" class="nav-item">EXPERIENCE</a>
+        <a href="#services" class="nav-item">SERVICES</a>
+        <a href="#contact" class="nav-item">CONTACT</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/923444257911" target="_blank" class="btn-primary" style="padding: 8px 18px; font-size: 11px;">
+          WHATSAPP
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge-pill">
+          <span class="status-dot"></span>
+          AVAILABLE FOR SOFTWARE ENGINEERING &amp; APPS
+        </div>
+
+        <h1 class="hero-title">
+          HI, I&rsquo;M <span class="gradient-text-cyan">USMAN SHAH</span><br />
+          <span id="typewriter-text" style="color: #cbd5e1;">Software Engineer</span>
+        </h1>
+
+        <p class="hero-desc">
+          Multidisciplinary Computer Scientist building high-performance modern web platforms, mobile applications, robust Python backends, and structured productivity workflows.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary">
+            <span>EXPLORE PROJECTS</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="https://github.com/US-development-9" target="_blank" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GITHUB PROFILE</span>
+          </a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="hero-metric-item">
+            <h4>4+</h4>
+            <p>Years Experience</p>
+          </div>
+          <div class="hero-metric-item">
+            <h4>24+</h4>
+            <p>Projects Built</p>
+          </div>
+          <div class="hero-metric-item">
+            <h4>1400+</h4>
+            <p>Code Commits</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-avatar-card">
+        <div class="avatar-frame">
+          <img src="images/usman-shah.jpg" alt="Usman Shah" onerror="this.onerror=null; this.src='public/images/usman-shah.jpg';" />
+        </div>
+        <div class="avatar-status-pill">
+          <span class="status-dot"></span>
+          <span>ISLAMABAD // REMOTE WORLDWIDE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill">DISCIPLINED ENGINEERING</div>
+        <h2>ABOUT <span class="gradient-text-cyan">USMAN SHAH</span></h2>
+        <p>Bridging computer science algorithmic rigor with production-grade engineering excellence across client, mobile, backend, and productivity layers.</p>
+      </div>
+
+      <div class="glass-card" style="padding: 36px; max-width: 900px; margin: 0 auto;">
+        <p style="font-size: 15px; color: #cbd5e1; line-height: 1.8; margin-bottom: 20px;">
+          I am a dedicated Computer Science graduate and Software Engineer passionate about writing clean, maintainable, and high-performance software. My technical journey spans building responsive web interfaces, robust Android and cross-platform mobile applications, scalable Python services, and enterprise-grade office data automation.
+        </p>
+        <p style="font-size: 15px; color: #94a3b8; line-height: 1.8;">
+          Whether engineering stateful frontend reactive apps in React &amp; Next.js, compiling cross-platform Flutter mobile experiences, or automating complex database queries and spreadsheet pipelines, I prioritize clean architecture, performance, and user satisfaction.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS SECTION (THE 4 PILLARS) ================= -->
+  <section id="skills" class="section" style="background: rgba(4, 6, 17, 0.6);">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill">TECHNICAL &amp; PRODUCTIVITY STACK</div>
+        <h2>SKILLS <span class="gradient-text-cyan">MATRIX</span></h2>
+        <p>Categorized competencies structured across four core pillars with zero artificial percentages.</p>
+      </div>
+
+      <!-- 4 Overview Pillar Cards -->
+      <div class="skills-pillars-grid">
+        <div class="pillar-card active" data-filter="all">
+          <div class="pillar-card-top">
+            <div class="pillar-icon-box" style="background: rgba(0, 240, 255, 0.1); color: var(--neon-cyan);">⚡</div>
+            <span class="badge-pill" style="padding: 2px 8px; font-size: 10px;">24 TOTAL</span>
+          </div>
+          <h3>All Disciplines</h3>
+          <p>Complete tech &amp; productivity suite.</p>
+        </div>
+
+        <div class="pillar-card" data-filter="web">
+          <div class="pillar-card-top">
+            <div class="pillar-icon-box" style="background: rgba(0, 240, 255, 0.1); color: var(--neon-cyan);">🌐</div>
+            <span class="badge-pill" style="padding: 2px 8px; font-size: 10px;">8 SKILLS</span>
+          </div>
+          <h3>Web Development</h3>
+          <p>HTML5, CSS3, JS, TS, React, Next, Node, Express</p>
+        </div>
+
+        <div class="pillar-card" data-filter="app">
+          <div class="pillar-card-top">
+            <div class="pillar-icon-box" style="background: rgba(168, 85, 247, 0.1); color: var(--neon-purple);">📱</div>
+            <span class="badge-pill" style="padding: 2px 8px; font-size: 10px;">5 SKILLS</span>
+          </div>
+          <h3>App Development</h3>
+          <p>Java, Kotlin, Dart, Flutter, React Native</p>
+        </div>
+
+        <div class="pillar-card" data-filter="python">
+          <div class="pillar-card-top">
+            <div class="pillar-icon-box" style="background: rgba(16, 185, 129, 0.1); color: var(--neon-emerald);">🐍</div>
+            <span class="badge-pill" style="padding: 2px 8px; font-size: 10px;">6 SKILLS</span>
+          </div>
+          <h3>Python Dev</h3>
+          <p>Python, Django, Flask, FastAPI, NumPy, Pandas</p>
+        </div>
+
+        <div class="pillar-card" data-filter="office">
+          <div class="pillar-card-top">
+            <div class="pillar-icon-box" style="background: rgba(56, 189, 248, 0.1); color: var(--neon-sky);">💼</div>
+            <span class="badge-pill" style="padding: 2px 8px; font-size: 10px;">5 TOOLS</span>
+          </div>
+          <h3>MS Office Suite</h3>
+          <p>Word, Excel, PowerPoint, Access, Outlook</p>
+        </div>
+      </div>
+
+      <!-- Controls Bar: Search & Category Filter Tabs -->
+      <div class="skills-filter-bar">
+        <div class="skills-search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="skill-search" placeholder="Search skill or capability..." />
+        </div>
+
+        <div class="category-tabs">
+          <button class="cat-tab active" data-filter="all">ALL (24)</button>
+          <button class="cat-tab" data-filter="web">WEB DEV (8)</button>
+          <button class="cat-tab" data-filter="app">APP DEV (5)</button>
+          <button class="cat-tab" data-filter="python">PYTHON (6)</button>
+          <button class="cat-tab" data-filter="office">MS OFFICE (5)</button>
+        </div>
+      </div>
+
+      <!-- ================= 1. WEB DEVELOPMENT ================= -->
+      <div class="category-group-block" data-category="web">
+        <div class="category-group-header">
+          <div class="category-group-title">
+            <span style="font-size: 22px;">🌐</span>
+            <h3>WEB DEVELOPMENT <span style="font-size: 12px; font-family: var(--font-mono); color: var(--neon-cyan);">(8 Technologies)</span></h3>
+          </div>
+          <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">FRONTEND • FULL-STACK • RUNTIMES</span>
+        </div>
+
+        <div class="skills-grid-4">
+          <!-- HTML5 -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" width="30" height="30"><path d="M3 2L4.636 20.364L12 22.41L19.364 20.364L21 2H3Z" fill="#E34F26"/><path d="M12 3.82V20.55L17.82 18.93L19.27 3.82H12Z" fill="#EF652A"/><path d="M12 8.18H7.91L8.18 11.18H12V8.18ZM12 14.18H9.73L9.55 12.18H7.55L7.91 16.18H12V14.18Z" fill="#EBEBEB"/><path d="M12 8.18V11.18H15.82L15.45 15.36L12 16.32V18.36L16.91 17L17.45 11.18L17.64 8.18H12Z" fill="#FFFFFF"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>HTML5</h4>
+                  <span class="skill-cat-tag">Web Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Modern semantic architecture, DOM structures, accessible web forms, and standard multimedia APIs.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Semantic HTML</span>
+              <span class="skill-tag-item">Canvas API</span>
+              <span class="skill-tag-item">Accessibility</span>
+            </div>
+          </div>
+
+          <!-- CSS3 -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" width="30" height="30"><path d="M3 2L4.636 20.364L12 22.41L19.364 20.364L21 2H3Z" fill="#1572B6"/><path d="M12 3.82V20.55L17.82 18.93L19.27 3.82H12Z" fill="#33A9DC"/><path d="M12 8.18H8.09L8.27 10.18H12V8.18ZM12 14.18H9.91L9.73 12.18H7.73L8.09 16.18H12V14.18Z" fill="#EBEBEB"/><path d="M12 8.18V10.18H15.91L15.73 12.18H12V14.18H15.55L15.18 18.36L12 19.25V21.25L17.09 19.82L17.27 17.82L17.64 13.82L17.82 11.82L18.18 8.18H12Z" fill="#FFFFFF"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>CSS3</h4>
+                  <span class="skill-cat-tag">Web Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Advanced Flexbox/Grid layouts, fluid responsive typography, modern CSS custom properties, and GPU keyframe animations.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Grid &amp; Flexbox</span>
+              <span class="skill-tag-item">Keyframe FX</span>
+              <span class="skill-tag-item">Responsive</span>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><rect width="24" height="24" rx="4" fill="#F7DF1E"/><path d="M7.5 18C7 18 6.5 17.7 6.1 17.2L7.3 15.6C7.6 15.9 7.8 16.1 8.2 16.1C8.6 16.1 8.9 15.9 8.9 15.2V10.5H10.8V15.3C10.8 17 9.8 18 7.5 18ZM13.8 18C12 18 10.9 17 10.9 15.3L12.7 14.8C12.8 15.7 13.3 16.3 14.1 16.3C14.8 16.3 15.3 15.9 15.3 15.3C15.3 14.6 14.8 14.3 13.8 13.8C12.1 13 11.2 12.3 11.2 10.7C11.2 9.2 12.4 8 14.2 8C15.6 8 16.7 8.6 17.2 9.8L15.6 10.7C15.3 10.1 14.8 9.7 14.1 9.7C13.5 9.7 13.1 10.1 13.1 10.6C13.1 11.2 13.5 11.5 14.4 11.9C16.3 12.7 17.2 13.6 17.2 15.1C17.2 16.8 15.8 18 13.8 18Z" fill="#000"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>JavaScript</h4>
+                  <span class="skill-cat-tag">Web Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Modern ESNext standards, event-loop handling, asynchronous promises, DOM manipulation, and dynamic client logic.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">ESNext</span>
+              <span class="skill-tag-item">Async/Await</span>
+              <span class="skill-tag-item">DOM APIs</span>
+            </div>
+          </div>
+
+          <!-- TypeScript -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><rect width="24" height="24" rx="4" fill="#3178C6"/><path d="M12.3 10.4H7.2V12.1H9V18H10.7V12.1H12.3V10.4ZM14.9 18C13.5 18 12.5 17.2 12.5 15.5L14.2 15C14.3 15.9 14.7 16.4 15.5 16.4C16.1 16.4 16.6 16.1 16.6 15.5C16.6 14.9 16.2 14.6 15.2 14.1C13.5 13.3 12.7 12.6 12.7 11.1C12.7 9.6 13.9 8.5 15.6 8.5C16.8 8.5 17.9 9.1 18.4 10.2L16.8 11.1C16.5 10.5 16.1 10.2 15.5 10.2C14.9 10.2 14.5 10.5 14.5 11C14.5 11.5 14.9 11.8 15.8 12.2C17.6 13 18.5 13.8 18.5 15.3C18.5 17 17 18 14.9 18Z" fill="#FFF"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>TypeScript</h4>
+                  <span class="skill-cat-tag">Web Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Strict type systems, robust generics, interfaces, modular design patterns, and scalable enterprise architectures.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Strict Typing</span>
+              <span class="skill-tag-item">Generics</span>
+              <span class="skill-tag-item">Clean Code</span>
+            </div>
+          </div>
+
+          <!-- React -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><circle cx="12" cy="12" r="2.2" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="9" ry="3.5" stroke="#61DAFB" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)" stroke="#61DAFB" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)" stroke="#61DAFB" stroke-width="1.2"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>React</h4>
+                  <span class="skill-cat-tag">Web Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Declarative component hierarchies, custom hooks, atomic state management, Virtual DOM diffing, and reactive UI patterns.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Custom Hooks</span>
+              <span class="skill-tag-item">Virtual DOM</span>
+              <span class="skill-tag-item">State Engines</span>
+            </div>
+          </div>
+
+          <!-- Next.js -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><circle cx="12" cy="12" r="11" fill="#000" stroke="#38BDF8" stroke-width="1"/><path d="M15.5 8.5V15.5M8.5 8.5V15.5L16.5 16.5" stroke="#FFF" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Next.js</h4>
+                  <span class="skill-cat-tag">Web Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">React Server Components, hybrid server/static rendering (SSR/SSG), streaming SSR, and edge API routing.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">App Router</span>
+              <span class="skill-tag-item">SSR / SSG</span>
+              <span class="skill-tag-item">Server Actions</span>
+            </div>
+          </div>
+
+          <!-- Node.js -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2L21 7.2V17.6L12 22.8L3 17.6V7.2L12 2Z" fill="#339933"/><path d="M12 4.5L19 8.5V16.3L12 20.3L5 16.3V8.5L12 4.5Z" fill="#68A063"/><path d="M12 7.5L16 9.8V14.4L12 16.7L8 14.4V9.8L12 7.5Z" fill="#FFF" fill-opacity="0.9"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Node.js</h4>
+                  <span class="skill-cat-tag">Web Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">High-throughput asynchronous non-blocking I/O backends, microservices, file streams, and WebSocket servers.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">V8 Engine</span>
+              <span class="skill-tag-item">Async I/O</span>
+              <span class="skill-tag-item">REST Endpoints</span>
+            </div>
+          </div>
+
+          <!-- Express.js -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><rect width="24" height="24" rx="5" fill="#1E293B" stroke="#64748B" stroke-width="1"/><path d="M4.5 15.5L8.5 8.5H10.5L6.5 15.5H4.5ZM10.2 15.5L14.2 8.5H16.2L12.2 15.5H10.2ZM15.5 14L18.5 9.5H20.5L17.5 14H15.5ZM17.5 14L20.5 18.5H18.5L15.5 14H17.5Z" fill="#F8FAFC"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Express.js</h4>
+                  <span class="skill-cat-tag">Web Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Flexible HTTP routing pipelines, custom middleware architectures, JWT authentication, and secure RESTful endpoints.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Middleware</span>
+              <span class="skill-tag-item">JWT Auth</span>
+              <span class="skill-tag-item">Microservices</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= 2. APP DEVELOPMENT ================= -->
+      <div class="category-group-block" data-category="app">
+        <div class="category-group-header">
+          <div class="category-group-title">
+            <span style="font-size: 22px;">📱</span>
+            <h3>APP DEVELOPMENT <span style="font-size: 12px; font-family: var(--font-mono); color: var(--neon-purple);">(5 Technologies)</span></h3>
+          </div>
+          <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">NATIVE ANDROID • CROSS-PLATFORM MOBILE</span>
+        </div>
+
+        <div class="skills-grid-4">
+          <!-- Java -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><path d="M8.5 19.5C11.5 19.8 15.2 19.8 17.5 18.5C16.8 19.5 14.8 20.2 12.8 20.2C10.2 20.2 8.5 19.5 8.5 19.5Z" fill="#5382A1"/><path d="M7 16.8C10.5 17.2 16.2 17.2 19 15.5C17.8 16.8 15 17.8 12.2 17.8C8.8 17.8 7 16.8 7 16.8Z" fill="#E76F00"/><path d="M12.5 12.8C13.8 12.8 16.2 12.5 17.2 11.2C15.8 11.5 14.5 11.5 13.2 11.5C10.2 11.5 9.2 10.5 9.2 9.2C9.2 8.2 9.8 7.2 11.5 5.8C9.5 6.5 8 8 8 9.8C8 12 10 12.8 12.5 12.8Z" fill="#5382A1"/><path d="M15.5 4C14.2 5.5 13.5 7 14.8 8.8C14.2 8.2 13.8 7.5 14 6.8C14.2 6 15 5 15.5 4Z" fill="#E76F00"/><path d="M6 21.5C9.5 22.2 16.5 22.2 20 20C17.5 21.5 12.5 22 6 21.5Z" fill="#E76F00"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Java</h4>
+                  <span class="skill-cat-tag">App Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Robust object-oriented architectures, multithreaded concurrency, Android SDK integration, and JVM memory efficiency.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Android SDK</span>
+              <span class="skill-tag-item">OOP Design</span>
+              <span class="skill-tag-item">Multithreading</span>
+            </div>
+          </div>
+
+          <!-- Kotlin -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><path d="M22 2H2V22H22L12 12L22 2Z" fill="url(#kot_grad)"/><defs><linearGradient id="kot_grad" x1="22" y1="2" x2="2" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#C757BC"/><stop offset="0.5" stop-color="#7F52FF"/><stop offset="1" stop-color="#00AFFF"/></linearGradient></defs></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Kotlin</h4>
+                  <span class="skill-cat-tag">App Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Modern Android app engineering, Jetpack Compose reactive UI, asynchronous coroutines, and null-safe architecture.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Jetpack Compose</span>
+              <span class="skill-tag-item">Coroutines</span>
+              <span class="skill-tag-item">Null Safety</span>
+            </div>
+          </div>
+
+          <!-- Dart -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><path d="M4.5 3.5L13.5 3.5L20.5 10.5L14.5 20.5L3.5 20.5L4.5 3.5Z" fill="#0175C2"/><path d="M13.5 3.5L20.5 10.5L10.5 20.5L4.5 20.5L13.5 3.5Z" fill="#02569B"/><path d="M4.5 3.5L13.5 3.5L8.5 12.5L3.5 12.5L4.5 3.5Z" fill="#29B6F6"/><path d="M8.5 12.5L14.5 20.5L3.5 20.5L8.5 12.5Z" fill="#01579B"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Dart</h4>
+                  <span class="skill-cat-tag">App Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Object-oriented programming, AOT and JIT compilation, asynchronous streams, and sound type system powering Flutter apps.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">AOT / JIT</span>
+              <span class="skill-tag-item">Async Streams</span>
+              <span class="skill-tag-item">Flutter Core</span>
+            </div>
+          </div>
+
+          <!-- Flutter -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><path d="M14.2 2L4 12.2L7.2 15.4L20.6 2H14.2Z" fill="#42A5F5"/><path d="M14.2 12.6L8.8 18L12 21.2L17.4 15.8L20.6 12.6H14.2Z" fill="#02569B"/><path d="M8.8 18L12 21.2L14.2 19L11 15.8L8.8 18Z" fill="#01579B"/><path d="M11 15.8L14.2 12.6L17.4 15.8L14.2 19L11 15.8Z" fill="#29B6F6"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Flutter</h4>
+                  <span class="skill-cat-tag">App Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Single codebase multi-platform engineering for iOS and Android, pixel-perfect custom widgets, and smooth 60fps animations.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">iOS &amp; Android</span>
+              <span class="skill-tag-item">Custom Widgets</span>
+              <span class="skill-tag-item">Bloc / Riverpod</span>
+            </div>
+          </div>
+
+          <!-- React Native -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><rect x="7" y="3" width="10" height="18" rx="2.5" stroke="#61DAFB" stroke-width="1.2"/><line x1="10" y1="18.5" x2="14" y2="18.5" stroke="#61DAFB" stroke-width="1.2" stroke-linecap="round"/><ellipse cx="12" cy="11" rx="4.5" ry="1.8" stroke="#00E5FF" stroke-width="1"/><ellipse cx="12" cy="11" rx="4.5" ry="1.8" transform="rotate(60 12 11)" stroke="#00E5FF" stroke-width="1"/><ellipse cx="12" cy="11" rx="4.5" ry="1.8" transform="rotate(120 12 11)" stroke="#00E5FF" stroke-width="1"/><circle cx="12" cy="11" r="1" fill="#61DAFB"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>React Native</h4>
+                  <span class="skill-cat-tag">App Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Universal mobile applications for iOS &amp; Android utilizing React components, native bridging, and modern Expo tooling.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Universal Mobile</span>
+              <span class="skill-tag-item">Native Modules</span>
+              <span class="skill-tag-item">Expo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= 3. PYTHON DEVELOPMENT ================= -->
+      <div class="category-group-block" data-category="python">
+        <div class="category-group-header">
+          <div class="category-group-title">
+            <span style="font-size: 22px;">🐍</span>
+            <h3>PYTHON DEVELOPMENT <span style="font-size: 12px; font-family: var(--font-mono); color: var(--neon-emerald);">(6 Technologies)</span></h3>
+          </div>
+          <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">FRAMEWORKS • ASYNC APIS • DATA WRANGLING</span>
+        </div>
+
+        <div class="skills-grid-4">
+          <!-- Python -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><path d="M11.8 2C8.6 2 8.7 3.4 8.7 3.4L8.7 4.9H12V5.4H5.3C5.3 5.4 2 5 2 9.5C2 14 5 13.8 5 13.8H6.5V11.8C6.5 9.5 8.5 9.5 8.5 9.5H12C14.2 9.5 14.2 7.5 14.2 7.5V3.8C14.2 3.8 14.3 2 11.8 2ZM10.2 3.3C10.6 3.3 10.9 3.6 10.9 4C10.9 4.4 10.6 4.7 10.2 4.7C9.8 4.7 9.5 4.4 9.5 4C9.5 3.6 9.8 3.3 10.2 3.3Z" fill="#3776AB"/><path d="M12.2 22C15.4 22 15.3 20.6 15.3 20.6L15.3 19.1H12V18.6H18.7C18.7 18.6 22 19 22 14.5C22 10 19 10.2 19 10.2H17.5V12.2C17.5 14.5 15.5 14.5 15.5 14.5H12C9.8 14.5 9.8 16.5 9.8 16.5V20.2C9.8 20.2 9.7 22 12.2 22ZM13.8 20.7C13.4 20.7 13.1 20.4 13.1 20C13.1 19.6 13.4 19.3 13.8 19.3C14.2 19.3 14.5 19.6 14.5 20C14.5 20.4 14.2 20.7 13.8 20.7Z" fill="#FFD43B"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Python</h4>
+                  <span class="skill-cat-tag">Python Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Clean syntax, dynamic object-oriented and functional paradigms, asynchronous programming, automation, and backend logic.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">AsyncIO</span>
+              <span class="skill-tag-item">OOP &amp; Functional</span>
+              <span class="skill-tag-item">Backend Core</span>
+            </div>
+          </div>
+
+          <!-- Django -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><rect width="24" height="24" rx="4" fill="#092E20"/><path d="M12.5 5.5H14.5V13.8C14.5 16.2 13.2 17.5 11 17.5C9.8 17.5 8.7 17 8.2 16.5L9.1 15C9.5 15.3 10.1 15.7 10.8 15.7C12 15.7 12.5 14.9 12.5 13.5V5.5ZM8.2 10.5H10.2V14.5H8.2V10.5Z" fill="#44B78B"/><circle cx="9.2" cy="7.8" r="1.1" fill="#44B78B"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Django</h4>
+                  <span class="skill-cat-tag">Python Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">MVT architectural pattern, Django ORM database queries, Django REST Framework (DRF), and robust built-in security.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">MVT Architecture</span>
+              <span class="skill-tag-item">Django ORM</span>
+              <span class="skill-tag-item">DRF APIs</span>
+            </div>
+          </div>
+
+          <!-- Flask -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><path d="M9 3H15M10 3V8L5 18C4.2 19.5 5.3 21 7 21H17C18.7 21 19.8 19.5 19 18L14 8V3" stroke="#00F0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 15H17" stroke="#00F0FF" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="18" r="1" fill="#00F0FF"/><circle cx="14" cy="17" r="1.2" fill="#00F0FF"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Flask</h4>
+                  <span class="skill-cat-tag">Python Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Flexible microframework for scalable microservices, Jinja2 template rendering, custom blueprints, and lightweight APIs.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Microframework</span>
+              <span class="skill-tag-item">Blueprints</span>
+              <span class="skill-tag-item">Jinja2</span>
+            </div>
+          </div>
+
+          <!-- FastAPI -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><circle cx="12" cy="12" r="10.5" fill="#009688"/><path d="M13.5 4.5L7.5 13.2H12L10.5 19.5L16.5 10.8H12L13.5 4.5Z" fill="#FFFFFF"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>FastAPI</h4>
+                  <span class="skill-cat-tag">Python Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Lightning-fast async REST APIs built on Starlette and Pydantic, automated interactive Swagger docs, and strict type validation.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Pydantic Models</span>
+              <span class="skill-tag-item">Async Endpoints</span>
+              <span class="skill-tag-item">Swagger Docs</span>
+            </div>
+          </div>
+
+          <!-- NumPy -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><rect width="24" height="24" rx="4" fill="#013243"/><path d="M5.5 18V6H7.8L12.5 13.2V6H14.8V18H12.5L7.8 10.8V18H5.5Z" fill="#4DABF7"/><path d="M16 9H18.5V11.5H16V9ZM16 13H18.5V15.5H16V13Z" fill="#4DABF7"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>NumPy</h4>
+                  <span class="skill-cat-tag">Python Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">High-performance multi-dimensional array processing, matrix computations, linear algebra, and optimized C-speed routines.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">N-D Arrays</span>
+              <span class="skill-tag-item">Matrix Math</span>
+              <span class="skill-tag-item">Vectorization</span>
+            </div>
+          </div>
+
+          <!-- Pandas -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><rect width="24" height="24" rx="4" fill="#130754"/><rect x="5" y="6" width="2.5" height="12" rx="1" fill="#FFD43B"/><rect x="9" y="4" width="2.5" height="16" rx="1" fill="#E70488"/><rect x="13" y="8" width="2.5" height="12" rx="1" fill="#00D8FF"/><rect x="17" y="5" width="2.5" height="14" rx="1" fill="#FFD43B"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Pandas</h4>
+                  <span class="skill-cat-tag">Python Development</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Fast DataFrame manipulation, time-series analysis, multi-source ETL pipelines, data cleaning, and dataset transformation.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">DataFrames</span>
+              <span class="skill-tag-item">Data Wrangling</span>
+              <span class="skill-tag-item">ETL Pipelines</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= 4. MICROSOFT OFFICE & PRODUCTIVITY ================= -->
+      <div class="category-group-block" data-category="office">
+        <div class="category-group-header">
+          <div class="category-group-title">
+            <span style="font-size: 22px;">💼</span>
+            <h3>MICROSOFT OFFICE &amp; PRODUCTIVITY <span style="font-size: 12px; font-family: var(--font-mono); color: var(--neon-sky);">(5 Tools)</span></h3>
+          </div>
+          <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">DOCUMENTS • SPREADSHEETS • PRESENTATIONS • DATABASES • WORKFLOWS</span>
+        </div>
+
+        <div class="skills-grid-4">
+          <!-- Microsoft Word -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><rect x="2" y="3" width="20" height="18" rx="3.5" fill="#185ABD"/><path d="M14 6H20.5C21.3 6 22 6.7 22 7.5V16.5C22 17.3 21.3 18 20.5 18H14V6Z" fill="#103F91" fill-opacity="0.4"/><rect x="3" y="5" width="11" height="14" rx="2" fill="#2B7CD3"/><path d="M5.5 8H7.2L8.2 12.5L9.5 8H11.2L9.2 15H7.5L6.3 10.3L5.2 15H3.5L5.5 8Z" fill="#FFFFFF"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Microsoft Word</h4>
+                  <span class="skill-cat-tag">Office &amp; Productivity</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Professional document creation, formatting and editing.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Document Design</span>
+              <span class="skill-tag-item">Templates</span>
+              <span class="skill-tag-item">Proofing &amp; Review</span>
+            </div>
+          </div>
+
+          <!-- Microsoft Excel -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><rect x="2" y="3" width="20" height="18" rx="3.5" fill="#107C41"/><path d="M14 6H20.5C21.3 6 22 6.7 22 7.5V16.5C22 17.3 21.3 18 20.5 18H14V6Z" fill="#0A5A2B" fill-opacity="0.4"/><rect x="3" y="5" width="11" height="14" rx="2" fill="#185C37"/><path d="M5.2 8H7.2L8.4 10.5L9.6 8H11.6L9.6 11.5L11.8 15H9.8L8.4 12.4L7 15H5L7.2 11.5L5.2 8Z" fill="#FFFFFF"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Microsoft Excel</h4>
+                  <span class="skill-cat-tag">Office &amp; Productivity</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Spreadsheets, formulas, data organization and analysis.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Formulas</span>
+              <span class="skill-tag-item">Pivot Tables</span>
+              <span class="skill-tag-item">Data Analytics</span>
+            </div>
+          </div>
+
+          <!-- Microsoft PowerPoint -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><rect x="2" y="3" width="20" height="18" rx="3.5" fill="#C43E1C"/><path d="M14 6H20.5C21.3 6 22 6.7 22 7.5V16.5C22 17.3 21.3 18 20.5 18H14V6Z" fill="#8B2810" fill-opacity="0.4"/><rect x="3" y="5" width="11" height="14" rx="2" fill="#D83B01"/><path d="M5.5 8H8.5C9.8 8 10.8 8.8 10.8 10.2C10.8 11.6 9.8 12.4 8.5 12.4H7.2V15H5.5V8ZM7.2 9.5V10.9H8.3C8.9 10.9 9.3 10.6 9.3 10.2C9.3 9.8 8.9 9.5 8.3 9.5H7.2Z" fill="#FFFFFF"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Microsoft PowerPoint</h4>
+                  <span class="skill-cat-tag">Office &amp; Productivity</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Professional presentations, slide design and visual communication.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Slide Design</span>
+              <span class="skill-tag-item">Visual Pitching</span>
+              <span class="skill-tag-item">Transitions</span>
+            </div>
+          </div>
+
+          <!-- Microsoft Access -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><rect x="2" y="3" width="20" height="18" rx="3.5" fill="#A4373A"/><path d="M14 6H20.5C21.3 6 22 6.7 22 7.5V16.5C22 17.3 21.3 18 20.5 18H14V6Z" fill="#752023" fill-opacity="0.4"/><rect x="3" y="5" width="11" height="14" rx="2" fill="#B7472A"/><path d="M5 15L7.8 8H9.4L12.2 15H10.4L9.8 13.4H7.4L6.8 15H5ZM7.8 12.1H9.4L8.6 9.8H8.5L7.8 12.1Z" fill="#FFFFFF"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Microsoft Access</h4>
+                  <span class="skill-cat-tag">Office &amp; Productivity</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Database creation, management and structured data handling.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Relational Data</span>
+              <span class="skill-tag-item">SQL Queries</span>
+              <span class="skill-tag-item">Report Design</span>
+            </div>
+          </div>
+
+          <!-- Microsoft Outlook -->
+          <div class="skill-card-3d">
+            <div>
+              <div class="skill-card-top">
+                <div class="skill-logo-wrap">
+                  <svg viewBox="0 0 24 24" width="30" height="30"><rect x="2" y="3" width="20" height="18" rx="3.5" fill="#0078D4"/><path d="M14 6H20.5C21.3 6 22 6.7 22 7.5V16.5C22 17.3 21.3 18 20.5 18H14V6Z" fill="#004C87" fill-opacity="0.4"/><rect x="3" y="5" width="11" height="14" rx="2" fill="#28A8EA"/><circle cx="8.5" cy="11.5" r="3.2" stroke="#FFFFFF" stroke-width="1.8" fill="none"/></svg>
+                </div>
+                <div class="skill-card-titles">
+                  <h4>Microsoft Outlook</h4>
+                  <span class="skill-cat-tag">Office &amp; Productivity</span>
+                </div>
+              </div>
+              <p class="skill-card-desc">Professional email, calendar and productivity management.</p>
+            </div>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Email Protocols</span>
+              <span class="skill-tag-item">Calendar Scheduling</span>
+              <span class="skill-tag-item">Productivity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS SECTION ================= -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill">PORTFOLIO WORK</div>
+        <h2>FEATURED <span class="gradient-text-cyan">PROJECTS</span></h2>
+        <p>Selected engineering systems, full-stack applications, and specialized software architectures.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="glass-card project-card">
+          <div>
+            <div class="project-card-header">
+              <span class="badge-pill" style="font-size: 10px;">WEB / SAAS</span>
+              <span style="font-size: 11px; font-family: var(--font-mono); color: var(--neon-cyan);">★ 680</span>
+            </div>
+            <h3>OmniFlow Workspace</h3>
+            <p>Real-time collaborative workspace with conflict-free CRDT document editing, live cursor broadcasting, and role-based permissions.</p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="skill-tag-item">Next.js</span>
+              <span class="skill-tag-item">TypeScript</span>
+              <span class="skill-tag-item">PostgreSQL</span>
+              <span class="skill-tag-item">WebSockets</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/US-development-9" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 11px;">VIEW CODE</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass-card project-card">
+          <div>
+            <div class="project-card-header">
+              <span class="badge-pill" style="font-size: 10px;">MOBILE APP</span>
+              <span style="font-size: 11px; font-family: var(--font-mono); color: var(--neon-purple);">★ 490</span>
+            </div>
+            <h3>PulseFit Mobile Tracker</h3>
+            <p>Cross-platform Flutter mobile application featuring real-time health telemetry ingestion, biometric charts, and offline-first SQLite sync.</p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="skill-tag-item">Flutter</span>
+              <span class="skill-tag-item">Dart</span>
+              <span class="skill-tag-item">Riverpod</span>
+              <span class="skill-tag-item">SQLite</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/US-development-9" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 11px;">VIEW CODE</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glass-card project-card">
+          <div>
+            <div class="project-card-header">
+              <span class="badge-pill" style="font-size: 10px;">PYTHON / API</span>
+              <span style="font-size: 11px; font-family: var(--font-mono); color: var(--neon-emerald);">★ 760</span>
+            </div>
+            <h3>Nexus Telemetry Engine</h3>
+            <p>High-throughput telemetry ingestion and analytical processing service built with FastAPI, Pandas, and asynchronous event pipelines.</p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="skill-tag-item">Python</span>
+              <span class="skill-tag-item">FastAPI</span>
+              <span class="skill-tag-item">Pandas</span>
+              <span class="skill-tag-item">NumPy</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/US-development-9" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 11px;">VIEW CODE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE SECTION ================= -->
+  <section id="experience" class="section" style="background: rgba(4, 6, 17, 0.6);">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill">CAREER TIMELINE</div>
+        <h2>EXPERIENCE &amp; <span class="gradient-text-cyan">EDUCATION</span></h2>
+        <p>A proven track record of software architecture, full-stack systems, and continuous technical growth.</p>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+        <div class="glass-card" style="padding: 24px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <h3 style="font-size: 18px; color: #fff;">Lead Software Engineer &amp; Full-Stack Architect</h3>
+            <span class="badge-pill" style="font-size: 10px;">2023 — PRESENT</span>
+          </div>
+          <div style="font-size: 12px; font-family: var(--font-mono); color: var(--neon-cyan); margin-bottom: 12px;">ENGINEERING SOLUTIONS // ISLAMABAD / REMOTE</div>
+          <p style="font-size: 13.5px; color: #cbd5e1; line-height: 1.6;">
+            Architecting responsive web applications, mobile app prototypes, and automated data pipelines. Implemented high-throughput REST APIs, reducing latency by over 35%.
+          </p>
+        </div>
+
+        <div class="glass-card" style="padding: 24px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <h3 style="font-size: 18px; color: #fff;">B.S. in Computer Science</h3>
+            <span class="badge-pill" style="font-size: 10px;">GRADUATED</span>
+          </div>
+          <div style="font-size: 12px; font-family: var(--font-mono); color: var(--neon-purple); margin-bottom: 12px;">DEPARTMENT OF COMPUTER SCIENCE</div>
+          <p style="font-size: 13.5px; color: #cbd5e1; line-height: 1.6;">
+            In-depth academic rigor in Data Structures &amp; Algorithms, Database Systems, Object-Oriented Software Design, Operating Systems, and Distributed Architectures.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES SECTION ================= -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill">OFFERINGS</div>
+        <h2>TECHNICAL <span class="gradient-text-cyan">SERVICES</span></h2>
+        <p>End-to-end consulting and custom software development tailored to modern production standards.</p>
+      </div>
+
+      <div class="skills-grid-4" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+        <div class="glass-card" style="padding: 26px;">
+          <div style="font-size: 28px; margin-bottom: 12px;">🌐</div>
+          <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px;">Full-Stack Web Development</h3>
+          <p style="font-size: 13px; color: var(--text-secondary);">Custom reactive web apps, responsive design systems, Next.js SSR, and secure RESTful backend APIs.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 26px;">
+          <div style="font-size: 28px; margin-bottom: 12px;">📱</div>
+          <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px;">Mobile App Engineering</h3>
+          <p style="font-size: 13px; color: var(--text-secondary);">Native Android (Kotlin/Java) and cross-platform iOS &amp; Android development with Flutter and React Native.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 26px;">
+          <div style="font-size: 28px; margin-bottom: 12px;">🐍</div>
+          <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px;">Python Backend &amp; Data</h3>
+          <p style="font-size: 13px; color: var(--text-secondary);">High-speed microservices with FastAPI, Django web portals, automated scraping, and NumPy/Pandas data processing.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 26px;">
+          <div style="font-size: 28px; margin-bottom: 12px;">💼</div>
+          <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px;">Office &amp; Database Automation</h3>
+          <p style="font-size: 13px; color: var(--text-secondary);">Advanced Excel financial models, Access database schemas, executive PowerPoint decks, and workflow optimization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section id="contact" class="section" style="background: rgba(4, 6, 17, 0.7);">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill">GET IN TOUCH</div>
+        <h2>LET&rsquo;S WORK <span class="gradient-text-cyan">TOGETHER</span></h2>
+        <p>Have an engineering project, mobile app, or consulting inquiry? Reach out directly via WhatsApp, Gmail, or the contact form.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <h3 style="font-size: 22px; color: #fff; margin-bottom: 12px;">Direct Contact Channels</h3>
+          <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+            I respond quickly to direct inquiries on WhatsApp and Gmail. Feel free to connect to discuss project scopes and technical consulting.
+          </p>
+
+          <div class="contact-info-list">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/923444257911?text=Hi%20Usman%20Shah%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20talk%20with%20you." target="_blank" class="contact-item-card">
+              <div class="contact-icon-box" style="color: #25D366; border-color: rgba(37, 211, 102, 0.4); background: rgba(37, 211, 102, 0.1);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.76 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.68 12.04 3.68C14.25 3.68 16.31 4.54 17.87 6.1C19.42 7.66 20.28 9.72 20.28 11.93C20.28 16.47 16.59 20.15 12.05 20.15ZM16.56 14.39C16.31 14.27 15.09 13.67 14.86 13.59C14.63 13.5 14.47 13.46 14.3 13.71C14.14 13.96 13.68 14.5 13.54 14.66C13.4 14.83 13.26 14.85 13.01 14.73C12.76 14.61 11.96 14.34 11.01 13.49C10.27 12.83 9.77 12.01 9.63 11.76C9.48 11.51 9.61 11.38 9.74 11.26C9.85 11.15 9.99 10.97 10.12 10.82C10.24 10.68 10.28 10.58 10.36 10.41C10.45 10.24 10.41 10.1 10.35 9.98C10.28 9.85 9.83 8.74 9.64 8.29C9.46 7.85 9.27 7.91 9.13 7.9C9 7.89 8.84 7.89 8.67 7.89C8.51 7.89 8.24 7.95 8.01 8.2C7.79 8.45 7.15 9.05 7.15 10.27C7.15 11.49 8.04 12.67 8.16 12.83C8.28 13 9.91 15.51 12.4 16.58C12.99 16.84 13.45 16.99 13.81 17.11C14.41 17.3 14.95 17.27 15.38 17.21C15.86 17.14 16.86 16.6 17.07 16.02C17.27 15.45 17.27 14.95 17.21 14.85C17.15 14.75 16.81 14.51 16.56 14.39Z"/>
+                </svg>
+              </div>
+              <div>
+                <div style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">WHATSAPP CHAT</div>
+                <div style="font-size: 15px; font-weight: 700; color: #fff;">+92 344 4257911</div>
+              </div>
+            </a>
+
+            <!-- Gmail -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mianusmanshah06@gmail.com" target="_blank" class="contact-item-card">
+              <div class="contact-icon-box" style="color: #EA4335; border-color: rgba(234, 67, 53, 0.4); background: rgba(234, 67, 53, 0.1);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">GMAIL INBOX</div>
+                <div style="font-size: 15px; font-weight: 700; color: #fff;">mianusmanshah06@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/US-development-9" target="_blank" class="contact-item-card">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </div>
+              <div>
+                <div style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">GITHUB PROFILE</div>
+                <div style="font-size: 15px; font-weight: 700; color: #fff;">@US-development-9</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Direct Dispatch Form -->
+        <form id="portfolio-contact-form" class="contact-form">
+          <h3 style="font-size: 18px; color: #fff; margin-bottom: 4px;">Direct Message Dispatch</h3>
+          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">Sends your message directly to Usman Shah via WhatsApp.</p>
+
+          <div class="form-group">
+            <label for="contact-name">Your Full Name</label>
+            <input type="text" id="contact-name" placeholder="e.g. John Doe" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Your Email Address</label>
+            <input type="email" id="contact-email" placeholder="e.g. john@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Project Details / Message</label>
+            <textarea id="contact-message" rows="4" placeholder="Describe your project, timeline, or inquiry..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="justify-content: center; width: 100%;">
+            <span>DISPATCH TO WHATSAPP</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand-text-title" style="font-size: 18px;">
+        USMAN SHAH<span style="color: var(--neon-cyan);">.DEV</span>
+      </div>
+      <p class="footer-copy">
+        &copy; 2026 Usman Shah. Engineered with high-performance web architecture. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Functionality Script (File 3) -->
+  <script src="script.js"></script>
+</body>
+</html>
