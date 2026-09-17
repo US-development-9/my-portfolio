@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initCyberCanvas();
+  initMouseAmbientGlow();
   initCyberAudio();
   initTypewriter();
   initNavbarScroll();
@@ -14,71 +15,78 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
 });
 
-/* ================= 1. CYBER CANVAS PARTICLES ================= */
+/* ================= 1. LIGHTWEIGHT CYBER CANVAS PARTICLES ================= */
 function initCyberCanvas() {
   const canvas = document.getElementById('cyber-canvas');
   if (!canvas) return;
 
   const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
   let width = (canvas.width = window.innerWidth);
   let height = (canvas.height = window.innerHeight);
+  let isMobile = width < 768;
+  const particleCount = isMobile ? 20 : 50;
+  const particles = [];
+  let animFrameId = null;
+  let isRunning = true;
 
-  window.addEventListener('resize', () => {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function resize() {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
+    isMobile = width < 768;
+  }
+
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(resize, 150);
   });
 
-  const particleCount = Math.min(width < 768 ? 40 : 80, 100);
-  const particles = [];
-  const mouse = { x: width / 2, y: height / 2, radius: 120 };
-
-  window.addEventListener('mousemove', (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-  });
+  const palette = ['#00f0ff', '#a855f7', '#38bdf8', '#10b981', '#818cf8'];
 
   class Particle {
     constructor() {
+      this.reset(true);
+    }
+
+    reset(initial = false) {
       this.x = Math.random() * width;
-      this.y = Math.random() * height;
-      this.size = Math.random() * 2 + 0.8;
-      this.speedX = (Math.random() - 0.5) * 0.6;
-      this.speedY = (Math.random() - 0.5) * 0.6;
-      this.color = Math.random() > 0.4 ? '#00f0ff' : '#a855f7';
-      this.alpha = Math.random() * 0.6 + 0.2;
+      this.y = initial ? Math.random() * height : height + 10;
+      this.size = Math.random() * 1.6 + 0.8;
+      this.speedX = (Math.random() - 0.5) * 0.4;
+      this.speedY = -(Math.random() * 0.45 + 0.2); // upward gentle drift
+      this.swayPhase = Math.random() * Math.PI * 2;
+      this.swaySpeed = Math.random() * 0.02 + 0.008;
+      this.color = palette[Math.floor(Math.random() * palette.length)];
+      this.baseAlpha = Math.random() * 0.4 + 0.2;
+      this.pulsePhase = Math.random() * Math.PI * 2;
+      this.pulseSpeed = Math.random() * 0.025 + 0.012;
     }
 
     update() {
-      this.x += this.speedX;
+      this.swayPhase += this.swaySpeed;
+      this.pulsePhase += this.pulseSpeed;
+      this.x += this.speedX + Math.sin(this.swayPhase) * 0.25;
       this.y += this.speedY;
 
-      if (this.x < 0 || this.x > width) this.speedX *= -1;
-      if (this.y < 0 || this.y > height) this.speedY *= -1;
-
-      // Mouse interactive distance
-      const dx = mouse.x - this.x;
-      const dy = mouse.y - this.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-
-      if (distance < mouse.radius) {
-        const force = (mouse.radius - distance) / mouse.radius;
-        const dirX = dx / distance;
-        const dirY = dy / distance;
-        this.x -= dirX * force * 2;
-        this.y -= dirY * force * 2;
+      // Wrap around edges softly
+      if (this.x < -10) this.x = width + 10;
+      if (this.x > width + 10) this.x = -10;
+      if (this.y < -10) {
+        this.reset(false);
       }
     }
 
     draw() {
-      ctx.save();
-      ctx.globalAlpha = this.alpha;
+      const currentAlpha = this.baseAlpha + Math.sin(this.pulsePhase) * 0.15;
+      ctx.globalAlpha = Math.max(0.08, Math.min(0.8, currentAlpha));
       ctx.fillStyle = this.color;
-      ctx.shadowBlur = 10;
-      ctx.shadowColor = this.color;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
-      ctx.restore();
     }
   }
 
@@ -86,39 +94,82 @@ function initCyberCanvas() {
     particles.push(new Particle());
   }
 
-  function animate() {
+  function render() {
     ctx.clearRect(0, 0, width, height);
 
-    // Connect close particles with neural lines
-    for (let a = 0; a < particles.length; a++) {
-      for (let b = a + 1; b < particles.length; b++) {
-        const dx = particles[a].x - particles[b].x;
-        const dy = particles[a].y - particles[b].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < 110) {
-          ctx.save();
-          ctx.globalAlpha = (1 - dist / 110) * 0.18;
-          ctx.strokeStyle = '#00f0ff';
-          ctx.lineWidth = 0.8;
-          ctx.beginPath();
-          ctx.moveTo(particles[a].x, particles[a].y);
-          ctx.lineTo(particles[b].x, particles[b].y);
-          ctx.stroke();
-          ctx.restore();
-        }
+    for (let i = 0; i < particles.length; i++) {
+      if (!prefersReducedMotion) {
+        particles[i].update();
       }
+      particles[i].draw();
     }
 
-    particles.forEach((p) => {
-      p.update();
-      p.draw();
-    });
-
-    requestAnimationFrame(animate);
+    if (isRunning && !prefersReducedMotion) {
+      animFrameId = requestAnimationFrame(render);
+    }
   }
 
-  animate();
+  // Auto-pause when tab is inactive to preserve 100% CPU/battery
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      isRunning = false;
+      if (animFrameId) cancelAnimationFrame(animFrameId);
+    } else {
+      if (!isRunning) {
+        isRunning = true;
+        animFrameId = requestAnimationFrame(render);
+      }
+    }
+  });
+
+  render();
+}
+
+/* ================= 2. MOUSE AMBIENT GLOW TRACKER ================= */
+function initMouseAmbientGlow() {
+  const glowEl = document.getElementById('bg-cursor-glow');
+  if (!glowEl) return;
+
+  // Don't bind on touch/mobile devices
+  if (window.matchMedia('(hover: none)').matches || window.innerWidth < 768) {
+    return;
+  }
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let currentX = mouseX;
+  let currentY = mouseY;
+  let isMoving = false;
+  let rafId = null;
+
+  function updatePosition() {
+    // Smooth easing
+    currentX += (mouseX - currentX) * 0.12;
+    currentY += (mouseY - currentY) * 0.12;
+
+    document.documentElement.style.setProperty('--mouse-x', `${currentX.toFixed(1)}px`);
+    document.documentElement.style.setProperty('--mouse-y', `${currentY.toFixed(1)}px`);
+
+    if (Math.abs(mouseX - currentX) > 0.1 || Math.abs(mouseY - currentY) > 0.1) {
+      rafId = requestAnimationFrame(updatePosition);
+    } else {
+      isMoving = false;
+    }
+  }
+
+  window.addEventListener(
+    'mousemove',
+    (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      if (!isMoving) {
+        isMoving = true;
+        rafId = requestAnimationFrame(updatePosition);
+      }
+    },
+    { passive: true }
+  );
 }
 
 /* ================= 2. CYBER AUDIO SYNTHESIS ================= */

@@ -7,7 +7,7 @@
   <meta name="description" content="Official portfolio of Usman Shah — Software Engineer specializing in Web Development, Mobile App Development, Python Architecture, and Productivity Systems." />
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,14 +19,70 @@
 </head>
 <body>
 
-  <!-- Dynamic Cyber Particle Canvas Background -->
-  <canvas id="cyber-canvas"></canvas>
-  <div class="cyber-grid-overlay"></div>
+  <!-- ================= AESTHETIC LIGHTWEIGHT BACKGROUND SYSTEM ================= -->
+  <div class="bg-system" aria-hidden="true">
+    <!-- Deep obsidian base & atmospheric gradient fields -->
+    <div class="bg-base-layer"></div>
+    
+    <!-- 4 Clearly Visible Animated Aurora Light Streams -->
+    <div class="bg-aurora-container">
+      <div class="bg-aurora bg-aurora-cyan"></div>
+      <div class="bg-aurora bg-aurora-purple"></div>
+      <div class="bg-aurora bg-aurora-emerald"></div>
+      <div class="bg-aurora bg-aurora-indigo"></div>
+    </div>
 
-  <!-- Ambient Lighting Elements -->
-  <div class="ambient-glow" style="top: 10%; left: 15%; width: 500px; height: 500px; background: rgba(0, 240, 255, 0.06);"></div>
-  <div class="ambient-glow" style="top: 40%; right: 10%; width: 600px; height: 600px; background: rgba(168, 85, 247, 0.06);"></div>
-  <div class="ambient-glow" style="top: 70%; left: 30%; width: 550px; height: 550px; background: rgba(16, 185, 129, 0.05);"></div>
+    <!-- 3D Perspective Technical Grid with Slow Drift -->
+    <div class="bg-perspective-grid"></div>
+
+    <!-- Digital Matrix Dots Layer -->
+    <div class="bg-digital-dots"></div>
+
+    <!-- Inline SVG Cyber Circuit Lines & Glowing Nodes (Zero HTTP Request) -->
+    <svg class="bg-circuit-lines" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <!-- Circuit Path 1: Cyan Top-Right -->
+      <path d="M1100 0 V180 L1250 330 H1440" stroke="url(#circuit-cyan-grad)" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.45" />
+      <circle cx="1250" cy="330" r="4" fill="#00f0ff" class="pulse-node" />
+      <circle cx="1100" cy="180" r="3.5" fill="#00f0ff" class="pulse-node-delayed" />
+
+      <!-- Circuit Path 2: Purple Mid-Left -->
+      <path d="M0 450 H180 L280 550 V750 L380 850 H600" stroke="url(#circuit-purple-grad)" stroke-width="1.5" opacity="0.4" />
+      <circle cx="180" cy="450" r="3.5" fill="#a855f7" class="pulse-node" />
+      <circle cx="280" cy="550" r="4" fill="#a855f7" class="pulse-node-delayed" />
+      <circle cx="380" cy="850" r="3.5" fill="#a855f7" class="pulse-node" />
+
+      <!-- Circuit Path 3: Emerald Bottom-Right -->
+      <path d="M900 900 V720 L1050 570 H1350 L1440 480" stroke="url(#circuit-emerald-grad)" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.35" />
+      <circle cx="900" cy="720" r="4" fill="#10b981" class="pulse-node" />
+      <circle cx="1050" cy="570" r="3.5" fill="#10b981" class="pulse-node-delayed" />
+      <circle cx="1350" cy="570" r="4" fill="#10b981" class="pulse-node" />
+
+      <!-- Gradients -->
+      <defs>
+        <linearGradient id="circuit-cyan-grad" x1="1100" y1="0" x2="1440" y2="330" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#00f0ff" stop-opacity="0.8" />
+          <stop offset="1" stop-color="#00f0ff" stop-opacity="0.1" />
+        </linearGradient>
+        <linearGradient id="circuit-purple-grad" x1="0" y1="450" x2="600" y2="850" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#a855f7" stop-opacity="0.8" />
+          <stop offset="1" stop-color="#38bdf8" stop-opacity="0.15" />
+        </linearGradient>
+        <linearGradient id="circuit-emerald-grad" x1="900" y1="900" x2="1440" y2="480" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#10b981" stop-opacity="0.75" />
+          <stop offset="1" stop-color="#00f0ff" stop-opacity="0.15" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- Filmic micro-grain texture -->
+    <div class="bg-grain"></div>
+
+    <!-- 50 Floating Digital Particles Canvas -->
+    <canvas id="cyber-canvas"></canvas>
+
+    <!-- Interactive Mouse Ambient Glow -->
+    <div class="bg-cursor-glow" id="bg-cursor-glow"></div>
+  </div>
 
   <!-- ================= HEADER / NAVBAR ================= -->
   <header class="site-header">
@@ -120,9 +176,34 @@
       </div>
 
       <div class="hero-avatar-card">
+        <!-- Ambient Radial Halo behind photo -->
+        <div class="avatar-halo"></div>
+
         <div class="avatar-frame">
+          <!-- Real USMAN SHAH High-Definition Photograph -->
           <img src="images/usman-shah.jpg" alt="Usman Shah" onerror="this.onerror=null; this.src='public/images/usman-shah.jpg';" />
+
+          <!-- Lightweight 3D Cyber Holographic Object (Active by default, auto-moving, smoothly disappears on hover) -->
+          <div class="avatar-cyber-overlay" aria-hidden="true">
+            <div class="cyber-scan-laser"></div>
+            <div class="cyber-holo-orb">
+              <div class="cyber-holo-ring ring-1"></div>
+              <div class="cyber-holo-ring ring-2"></div>
+              <div class="cyber-holo-ring ring-3"></div>
+              <div class="cyber-holo-core"></div>
+            </div>
+            <div class="cyber-hud-bracket top-left"></div>
+            <div class="cyber-hud-bracket top-right"></div>
+            <div class="cyber-hud-bracket bottom-left"></div>
+            <div class="cyber-hud-bracket bottom-right"></div>
+            <div class="cyber-hud-badge">
+              <span class="cyber-hud-dot"></span>
+              <span>USMAN SHAH // ARCHITECT</span>
+            </div>
+            <div class="cyber-mesh-layer"></div>
+          </div>
         </div>
+
         <div class="avatar-status-pill">
           <span class="status-dot"></span>
           <span>ISLAMABAD // REMOTE WORLDWIDE</span>
