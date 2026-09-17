@@ -4,103 +4,89 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>USMAN SHAH // Software Engineer • Computer Scientist</title>
-  <meta name="description" content="Official portfolio of Usman Shah — Software Engineer specializing in Web Development, Mobile App Development, Python Architecture, and Productivity Systems." />
+  <meta name="description" content="Official portfolio of Usman Shah — Software Engineer specializing in Full-Stack Web Development, Mobile App Engineering, Python Architecture, and 3D Creative Technology." />
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts Preconnect & Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheet (File 2) -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ================= AESTHETIC LIGHTWEIGHT BACKGROUND SYSTEM ================= -->
-  <div class="bg-system" aria-hidden="true">
-    <!-- Deep obsidian base & atmospheric gradient fields -->
-    <div class="bg-base-layer"></div>
-    
-    <!-- 4 Clearly Visible Animated Aurora Light Streams -->
-    <div class="bg-aurora-container">
-      <div class="bg-aurora bg-aurora-cyan"></div>
-      <div class="bg-aurora bg-aurora-purple"></div>
-      <div class="bg-aurora bg-aurora-emerald"></div>
-      <div class="bg-aurora bg-aurora-indigo"></div>
-    </div>
-
-    <!-- 3D Perspective Technical Grid with Slow Drift -->
-    <div class="bg-perspective-grid"></div>
-
-    <!-- Digital Matrix Dots Layer -->
-    <div class="bg-digital-dots"></div>
-
-    <!-- Inline SVG Cyber Circuit Lines & Glowing Nodes (Zero HTTP Request) -->
-    <svg class="bg-circuit-lines" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <!-- Circuit Path 1: Cyan Top-Right -->
-      <path d="M1100 0 V180 L1250 330 H1440" stroke="url(#circuit-cyan-grad)" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.45" />
-      <circle cx="1250" cy="330" r="4" fill="#00f0ff" class="pulse-node" />
-      <circle cx="1100" cy="180" r="3.5" fill="#00f0ff" class="pulse-node-delayed" />
-
-      <!-- Circuit Path 2: Purple Mid-Left -->
-      <path d="M0 450 H180 L280 550 V750 L380 850 H600" stroke="url(#circuit-purple-grad)" stroke-width="1.5" opacity="0.4" />
-      <circle cx="180" cy="450" r="3.5" fill="#a855f7" class="pulse-node" />
-      <circle cx="280" cy="550" r="4" fill="#a855f7" class="pulse-node-delayed" />
-      <circle cx="380" cy="850" r="3.5" fill="#a855f7" class="pulse-node" />
-
-      <!-- Circuit Path 3: Emerald Bottom-Right -->
-      <path d="M900 900 V720 L1050 570 H1350 L1440 480" stroke="url(#circuit-emerald-grad)" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.35" />
-      <circle cx="900" cy="720" r="4" fill="#10b981" class="pulse-node" />
-      <circle cx="1050" cy="570" r="3.5" fill="#10b981" class="pulse-node-delayed" />
-      <circle cx="1350" cy="570" r="4" fill="#10b981" class="pulse-node" />
-
-      <!-- Gradients -->
-      <defs>
-        <linearGradient id="circuit-cyan-grad" x1="1100" y1="0" x2="1440" y2="330" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#00f0ff" stop-opacity="0.8" />
-          <stop offset="1" stop-color="#00f0ff" stop-opacity="0.1" />
-        </linearGradient>
-        <linearGradient id="circuit-purple-grad" x1="0" y1="450" x2="600" y2="850" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#a855f7" stop-opacity="0.8" />
-          <stop offset="1" stop-color="#38bdf8" stop-opacity="0.15" />
-        </linearGradient>
-        <linearGradient id="circuit-emerald-grad" x1="900" y1="900" x2="1440" y2="480" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#10b981" stop-opacity="0.75" />
-          <stop offset="1" stop-color="#00f0ff" stop-opacity="0.15" />
-        </linearGradient>
-      </defs>
-    </svg>
-
-    <!-- Filmic micro-grain texture -->
-    <div class="bg-grain"></div>
-
-    <!-- 50 Floating Digital Particles Canvas -->
-    <canvas id="cyber-canvas"></canvas>
-
-    <!-- Interactive Mouse Ambient Glow -->
-    <div class="bg-cursor-glow" id="bg-cursor-glow"></div>
+  <!-- ================= AMBIENT BACKGROUND SYSTEM ================= -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-gradient-base"></div>
+    <div class="ambient-grid"></div>
+    <div class="ambient-glow-cursor" id="ambient-glow-cursor"></div>
   </div>
 
-  <!-- ================= HEADER / NAVBAR ================= -->
+  <!-- ================= HEADER / HUD NAVBAR ================= -->
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="#home" class="brand-logo">
-        <div class="brand-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="16 18 22 12 16 6"></polyline>
-            <polyline points="8 6 2 12 8 18"></polyline>
+      <a href="#home" class="brand-link" id="brand-logo-btn" aria-label="Usman Shah Home - Return to top">
+        <div class="brand-monogram-stage" id="brand-monogram-stage" title="USMAN // 'US' Monogram">
+          <svg class="brand-us-svg" width="44" height="44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="US Monogram">
+            <defs>
+              <linearGradient id="navUsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0d1838" stop-opacity="0.85" />
+                <stop offset="100%" stop-color="#040817" stop-opacity="0.95" />
+              </linearGradient>
+              <linearGradient id="navUsTitanium" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" />
+                <stop offset="25%" stop-color="#e2e8f0" />
+                <stop offset="65%" stop-color="#94a3b8" />
+                <stop offset="100%" stop-color="#475569" />
+              </linearGradient>
+              <linearGradient id="navUsCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7dd3fc" />
+                <stop offset="35%" stop-color="#00f0ff" />
+                <stop offset="85%" stop-color="#0284c7" />
+                <stop offset="100%" stop-color="#0369a1" />
+              </linearGradient>
+              <linearGradient id="navUsShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#0b1329" />
+                <stop offset="100%" stop-color="#01040f" />
+              </linearGradient>
+              <filter id="navUsGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0, 240, 255, 0.45)" />
+              </filter>
+            </defs>
+            <!-- 3D Squircle Base Container -->
+            <rect x="4" y="4" width="92" height="92" rx="22" fill="url(#navUsBg)" stroke="rgba(0, 240, 255, 0.35)" stroke-width="1.5" />
+            
+            <!-- 3D Shadow Depth Underlay -->
+            <path d="M22 24 L34 24 L34 56 C34 65 41 70 50 70 C59 70 66 65 66 56 L66 40 L78 40 L78 57 C78 72 65 82 50 82 C35 82 22 72 22 57 Z" fill="url(#navUsShadow)" transform="translate(0, 3)" />
+            
+            <!-- U-Pillar Foundation & Lower Cradle (Brushed Platinum) -->
+            <path d="M22 22 L34 22 L34 57 C34 65 41 69 50 69 C59 69 66 65 66 57 L66 44 L78 44 L78 58 C78 72 65 81 50 81 C35 81 22 72 22 58 Z" fill="url(#navUsTitanium)" />
+            
+            <!-- S-Helix Interlocking Ribbon (Electric Cyan Glow) -->
+            <path d="M78 22 L44 22 C34 22 28 27 28 35 C28 43 35 46 44 48 L56 50 C65 52 70 55 70 62 C70 70 62 74 52 74 L34 74 L34 65 L50 65 C55 65 58 63 58 60 C58 56 54 54 46 52 L36 50 C26 47 18 42 18 32 C18 22 28 15 42 15 L78 15 Z" fill="url(#navUsCyan)" filter="url(#navUsGlow)" />
+            
+            <!-- Subtle 3D Edge Bevel Highlights -->
+            <path d="M22 22 L78 15 L78 18 L24 24 Z" fill="rgba(255,255,255,0.6)" />
+            <circle cx="50" cy="50" r="3" fill="#ffffff" />
+            <circle cx="50" cy="50" r="6" stroke="rgba(0, 240, 255, 0.7)" stroke-width="1.2" fill="none" />
           </svg>
         </div>
-        <div>
-          <div class="brand-text-title">USMAN SHAH</div>
-          <div class="brand-text-sub">CS // ENGINEER</div>
+        <div class="brand-meta">
+          <div class="brand-wordmark-row">
+            <span class="brand-wordmark">USMAN</span>
+            <span class="brand-live-dot" title="Active &amp; Available"></span>
+          </div>
+          <span class="brand-tag">CS // SOFTWARE ARCHITECT</span>
         </div>
       </a>
 
-      <nav class="nav-links">
+      <!-- Desktop Nav Links with Sliding Indicator -->
+      <nav class="nav-links" id="main-nav-links" aria-label="Main Navigation">
+        <div class="nav-indicator-glide" id="nav-indicator-glide" aria-hidden="true"></div>
         <a href="#home" class="nav-item active">HOME</a>
         <a href="#about" class="nav-item">ABOUT</a>
         <a href="#skills" class="nav-item">SKILLS</a>
@@ -110,18 +96,41 @@
         <a href="#contact" class="nav-item">CONTACT</a>
       </nav>
 
+      <!-- Nav Actions -->
       <div class="nav-actions">
-        <a href="https://wa.me/923444257911" target="_blank" class="btn-primary" style="padding: 8px 18px; font-size: 11px;">
-          WHATSAPP
+        <!-- Audio Synthesizer Toggle -->
+        <button class="sound-toggle-btn active" id="sound-toggle" aria-label="Toggle Audio Feedback" title="Toggle Interaction Audio FX">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+
+        <!-- Direct WhatsApp CTA -->
+        <a href="https://wa.me/923444257911?text=Hi%20Usman%20Shah%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20talk%20with%20you." target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 9px 20px; font-size: 11.5px;">
+          <span>WHATSAPP</span>
         </a>
-        <button class="mobile-toggle" aria-label="Toggle Menu">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Mobile Navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
         </button>
       </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <a href="#home" class="mobile-nav-item active">Home</a>
+      <a href="#about" class="mobile-nav-item">About</a>
+      <a href="#skills" class="mobile-nav-item">Skills Universe</a>
+      <a href="#projects" class="mobile-nav-item">Projects</a>
+      <a href="#experience" class="mobile-nav-item">Experience &amp; Education</a>
+      <a href="#services" class="mobile-nav-item">Services</a>
+      <a href="#contact" class="mobile-nav-item">Contact</a>
     </div>
   </header>
 
@@ -136,7 +145,7 @@
 
         <h1 class="hero-title">
           HI, I&rsquo;M <span class="gradient-text-cyan">USMAN SHAH</span><br />
-          <span id="typewriter-text" style="color: #cbd5e1;">Software Engineer</span>
+          <span id="typewriter-text" style="color: #e2e8f0;">Software Engineer</span><span class="typewriter-cursor">_</span>
         </h1>
 
         <p class="hero-desc">
@@ -151,7 +160,7 @@
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
-          <a href="https://github.com/US-development-9" target="_blank" class="btn-secondary">
+          <a href="https://github.com/US-development-9" target="_blank" rel="noopener noreferrer" class="btn-secondary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
             </svg>
@@ -175,38 +184,38 @@
         </div>
       </div>
 
-      <div class="hero-avatar-card">
-        <!-- Ambient Radial Halo behind photo -->
-        <div class="avatar-halo"></div>
+      <!-- 3D Hero Interactive Stage -->
+      <div class="hero-visual-stage" id="hero-3d-stage">
+        <!-- 3D Three.js WebGL Canvas -->
+        <div class="hero-canvas-container">
+          <canvas id="hero-canvas3d"></canvas>
+        </div>
 
-        <div class="avatar-frame">
-          <!-- Real USMAN SHAH High-Definition Photograph -->
-          <img src="images/usman-shah.jpg" alt="Usman Shah" onerror="this.onerror=null; this.src='public/images/usman-shah.jpg';" />
-
-          <!-- Lightweight 3D Cyber Holographic Object (Active by default, auto-moving, smoothly disappears on hover) -->
-          <div class="avatar-cyber-overlay" aria-hidden="true">
-            <div class="cyber-scan-laser"></div>
-            <div class="cyber-holo-orb">
-              <div class="cyber-holo-ring ring-1"></div>
-              <div class="cyber-holo-ring ring-2"></div>
-              <div class="cyber-holo-ring ring-3"></div>
-              <div class="cyber-holo-core"></div>
-            </div>
-            <div class="cyber-hud-bracket top-left"></div>
-            <div class="cyber-hud-bracket top-right"></div>
-            <div class="cyber-hud-bracket bottom-left"></div>
-            <div class="cyber-hud-bracket bottom-right"></div>
-            <div class="cyber-hud-badge">
-              <span class="cyber-hud-dot"></span>
-              <span>USMAN SHAH // ARCHITECT</span>
-            </div>
-            <div class="cyber-mesh-layer"></div>
+        <!-- Telemetry HUD Card Top Right -->
+        <div class="hero-hud-card top-right">
+          <div class="hero-hud-label">SYSTEM TELEMETRY</div>
+          <div class="hero-hud-val">
+            <span class="status-dot"></span>
+            <span>OPTIMAL // 60 FPS</span>
           </div>
         </div>
 
-        <div class="avatar-status-pill">
-          <span class="status-dot"></span>
-          <span>ISLAMABAD // REMOTE WORLDWIDE</span>
+        <!-- Center Avatar Holographic Frame -->
+        <div class="hero-avatar-core" title="Usman Shah — Software Engineer">
+          <div class="avatar-halo"></div>
+          <div class="avatar-circle-frame">
+            <img src="images/usman-shah.jpg" alt="Usman Shah" onerror="this.onerror=null; this.src='public/images/usman-shah.jpg';" />
+            <div class="avatar-laser-scan"></div>
+          </div>
+        </div>
+
+        <!-- Telemetry HUD Card Bottom Left -->
+        <div class="hero-hud-card bottom-left">
+          <div class="hero-hud-label">LOCATION &amp; STATUS</div>
+          <div class="hero-hud-val">
+            <span style="color: var(--cyan-core);">📍</span>
+            <span>ISLAMABAD // REMOTE</span>
+          </div>
         </div>
       </div>
     </div>
@@ -221,31 +230,80 @@
         <p>Bridging computer science algorithmic rigor with production-grade engineering excellence across client, mobile, backend, and productivity layers.</p>
       </div>
 
-      <div class="glass-card" style="padding: 36px; max-width: 900px; margin: 0 auto;">
-        <p style="font-size: 15px; color: #cbd5e1; line-height: 1.8; margin-bottom: 20px;">
-          I am a dedicated Computer Science graduate and Software Engineer passionate about writing clean, maintainable, and high-performance software. My technical journey spans building responsive web interfaces, robust Android and cross-platform mobile applications, scalable Python services, and enterprise-grade office data automation.
-        </p>
-        <p style="font-size: 15px; color: #94a3b8; line-height: 1.8;">
-          Whether engineering stateful frontend reactive apps in React &amp; Next.js, compiling cross-platform Flutter mobile experiences, or automating complex database queries and spreadsheet pipelines, I prioritize clean architecture, performance, and user satisfaction.
-        </p>
+      <div class="about-grid">
+        <div class="glass-card">
+          <h3 style="font-size: 22px; color: #fff; margin-bottom: 16px;">Architectural Philosophy</h3>
+          <p style="font-size: 15px; color: #cbd5e1; line-height: 1.8; margin-bottom: 20px;">
+            I am a dedicated Computer Science graduate and Software Engineer passionate about writing clean, maintainable, and high-performance software. My technical journey spans building responsive web interfaces, robust Android and cross-platform mobile applications, scalable Python services, and enterprise-grade office data automation.
+          </p>
+          <p style="font-size: 15px; color: #94a3b8; line-height: 1.8;">
+            Whether engineering stateful frontend reactive apps in React &amp; Next.js, compiling cross-platform Flutter mobile experiences, or automating complex database queries and spreadsheet pipelines, I prioritize clean architecture, performance, and user satisfaction.
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <h3 style="font-size: 22px; color: #fff; margin-bottom: 16px;">Core Competency Highlights</h3>
+          <div class="about-features-list">
+            <div class="about-feat-item">
+              <div class="about-feat-icon">🌐</div>
+              <div class="about-feat-content">
+                <h4>Full-Stack Web Architecture</h4>
+                <p>Reactive, accessible frontend platforms paired with high-throughput Node.js &amp; Express API microservices.</p>
+              </div>
+            </div>
+            <div class="about-feat-item">
+              <div class="about-feat-icon">📱</div>
+              <div class="about-feat-content">
+                <h4>Native &amp; Cross-Platform Mobile</h4>
+                <p>Native Android engineering with Kotlin/Java and universal multi-platform compilation via Flutter &amp; Dart.</p>
+              </div>
+            </div>
+            <div class="about-feat-item">
+              <div class="about-feat-icon">🐍</div>
+              <div class="about-feat-content">
+                <h4>Python Backend &amp; Scientific Data</h4>
+                <p>FastAPI async microservices, Django frameworks, and matrix manipulation with NumPy and Pandas.</p>
+              </div>
+            </div>
+            <div class="about-feat-item">
+              <div class="about-feat-icon">💼</div>
+              <div class="about-feat-content">
+                <h4>Enterprise Office Suite Automation</h4>
+                <p>Advanced relational databases in Access, financial analytics in Excel, and executive PowerPoint reporting.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= SKILLS SECTION (THE 4 PILLARS) ================= -->
-  <section id="skills" class="section" style="background: rgba(4, 6, 17, 0.6);">
+  <!-- ================= 3D SKILL UNIVERSE SECTION ================= -->
+  <section id="skills" class="section" style="background: rgba(4, 7, 20, 0.65);">
     <div class="container">
       <div class="section-head">
         <div class="badge-pill">TECHNICAL &amp; PRODUCTIVITY STACK</div>
-        <h2>SKILLS <span class="gradient-text-cyan">MATRIX</span></h2>
-        <p>Categorized competencies structured across four core pillars with zero artificial percentages.</p>
+        <h2>SKILLS MATRIX &amp; <span class="gradient-text-cyan">3D UNIVERSE</span></h2>
+        <p>Explore an interactive 3D constellation of my technical competencies structured across four core pillars with zero artificial percentages.</p>
+      </div>
+
+      <!-- 3D Skill Universe Canvas Stage -->
+      <div class="skills-universe-stage" id="skills-3d-stage">
+        <canvas id="skills-canvas3d"></canvas>
+        <div class="skills-stage-hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 8v8M8 12h8"></path>
+          </svg>
+          <span>INTERACTIVE 3D UNIVERSE // DRAG TO ROTATE • HOVER TO INSPECT</span>
+        </div>
       </div>
 
       <!-- 4 Overview Pillar Cards -->
       <div class="skills-pillars-grid">
         <div class="pillar-card active" data-filter="all">
-          <div class="pillar-card-top">
-            <div class="pillar-icon-box" style="background: rgba(0, 240, 255, 0.1); color: var(--neon-cyan);">⚡</div>
+          <div class="pillar-top">
+            <div class="pillar-icon" style="background: rgba(0, 240, 255, 0.1); color: var(--cyan-core);">⚡</div>
             <span class="badge-pill" style="padding: 2px 8px; font-size: 10px;">24 TOTAL</span>
           </div>
           <h3>All Disciplines</h3>
@@ -253,8 +311,8 @@
         </div>
 
         <div class="pillar-card" data-filter="web">
-          <div class="pillar-card-top">
-            <div class="pillar-icon-box" style="background: rgba(0, 240, 255, 0.1); color: var(--neon-cyan);">🌐</div>
+          <div class="pillar-top">
+            <div class="pillar-icon" style="background: rgba(0, 240, 255, 0.1); color: var(--cyan-core);">🌐</div>
             <span class="badge-pill" style="padding: 2px 8px; font-size: 10px;">8 SKILLS</span>
           </div>
           <h3>Web Development</h3>
@@ -262,8 +320,8 @@
         </div>
 
         <div class="pillar-card" data-filter="app">
-          <div class="pillar-card-top">
-            <div class="pillar-icon-box" style="background: rgba(168, 85, 247, 0.1); color: var(--neon-purple);">📱</div>
+          <div class="pillar-top">
+            <div class="pillar-icon" style="background: rgba(168, 85, 247, 0.1); color: var(--purple-core);">📱</div>
             <span class="badge-pill" style="padding: 2px 8px; font-size: 10px;">5 SKILLS</span>
           </div>
           <h3>App Development</h3>
@@ -271,8 +329,8 @@
         </div>
 
         <div class="pillar-card" data-filter="python">
-          <div class="pillar-card-top">
-            <div class="pillar-icon-box" style="background: rgba(16, 185, 129, 0.1); color: var(--neon-emerald);">🐍</div>
+          <div class="pillar-top">
+            <div class="pillar-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--emerald-core);">🐍</div>
             <span class="badge-pill" style="padding: 2px 8px; font-size: 10px;">6 SKILLS</span>
           </div>
           <h3>Python Dev</h3>
@@ -280,8 +338,8 @@
         </div>
 
         <div class="pillar-card" data-filter="office">
-          <div class="pillar-card-top">
-            <div class="pillar-icon-box" style="background: rgba(56, 189, 248, 0.1); color: var(--neon-sky);">💼</div>
+          <div class="pillar-top">
+            <div class="pillar-icon" style="background: rgba(56, 189, 248, 0.1); color: var(--sky-core);">💼</div>
             <span class="badge-pill" style="padding: 2px 8px; font-size: 10px;">5 TOOLS</span>
           </div>
           <h3>MS Office Suite</h3>
@@ -290,13 +348,13 @@
       </div>
 
       <!-- Controls Bar: Search & Category Filter Tabs -->
-      <div class="skills-filter-bar">
+      <div class="skills-controls-bar">
         <div class="skills-search-box">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          <input type="text" id="skill-search" placeholder="Search skill or capability..." />
+          <input type="text" id="skill-search" placeholder="Search technology, framework, or tool..." />
         </div>
 
         <div class="category-tabs">
@@ -313,14 +371,14 @@
         <div class="category-group-header">
           <div class="category-group-title">
             <span style="font-size: 22px;">🌐</span>
-            <h3>WEB DEVELOPMENT <span style="font-size: 12px; font-family: var(--font-mono); color: var(--neon-cyan);">(8 Technologies)</span></h3>
+            <h3>WEB DEVELOPMENT <span style="font-size: 12px; font-family: var(--font-mono); color: var(--cyan-core);">(8 Technologies)</span></h3>
           </div>
           <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">FRONTEND • FULL-STACK • RUNTIMES</span>
         </div>
 
         <div class="skills-grid-4">
           <!-- HTML5 -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="html5">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -341,7 +399,7 @@
           </div>
 
           <!-- CSS3 -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="css3">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -362,7 +420,7 @@
           </div>
 
           <!-- JavaScript -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="javascript">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -383,7 +441,7 @@
           </div>
 
           <!-- TypeScript -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="typescript">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -404,7 +462,7 @@
           </div>
 
           <!-- React -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="react">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -425,7 +483,7 @@
           </div>
 
           <!-- Next.js -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="nextjs">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -446,7 +504,7 @@
           </div>
 
           <!-- Node.js -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="nodejs">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -467,7 +525,7 @@
           </div>
 
           <!-- Express.js -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="expressjs">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -494,14 +552,14 @@
         <div class="category-group-header">
           <div class="category-group-title">
             <span style="font-size: 22px;">📱</span>
-            <h3>APP DEVELOPMENT <span style="font-size: 12px; font-family: var(--font-mono); color: var(--neon-purple);">(5 Technologies)</span></h3>
+            <h3>APP DEVELOPMENT <span style="font-size: 12px; font-family: var(--font-mono); color: var(--purple-core);">(5 Technologies)</span></h3>
           </div>
           <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">NATIVE ANDROID • CROSS-PLATFORM MOBILE</span>
         </div>
 
         <div class="skills-grid-4">
           <!-- Java -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="java">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -522,7 +580,7 @@
           </div>
 
           <!-- Kotlin -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="kotlin">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -543,7 +601,7 @@
           </div>
 
           <!-- Dart -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="dart">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -564,7 +622,7 @@
           </div>
 
           <!-- Flutter -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="flutter">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -580,12 +638,12 @@
             <div class="skill-tags-row">
               <span class="skill-tag-item">iOS &amp; Android</span>
               <span class="skill-tag-item">Custom Widgets</span>
-              <span class="skill-tag-item">Bloc / Riverpod</span>
+              <span class="skill-tag-item">Riverpod</span>
             </div>
           </div>
 
           <!-- React Native -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="reactnative">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -612,14 +670,14 @@
         <div class="category-group-header">
           <div class="category-group-title">
             <span style="font-size: 22px;">🐍</span>
-            <h3>PYTHON DEVELOPMENT <span style="font-size: 12px; font-family: var(--font-mono); color: var(--neon-emerald);">(6 Technologies)</span></h3>
+            <h3>PYTHON DEVELOPMENT <span style="font-size: 12px; font-family: var(--font-mono); color: var(--emerald-core);">(6 Technologies)</span></h3>
           </div>
           <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">FRAMEWORKS • ASYNC APIS • DATA WRANGLING</span>
         </div>
 
         <div class="skills-grid-4">
           <!-- Python -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="python">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -640,7 +698,7 @@
           </div>
 
           <!-- Django -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="django">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -661,7 +719,7 @@
           </div>
 
           <!-- Flask -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="flask">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -682,7 +740,7 @@
           </div>
 
           <!-- FastAPI -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="fastapi">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -703,7 +761,7 @@
           </div>
 
           <!-- NumPy -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="numpy">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -724,7 +782,7 @@
           </div>
 
           <!-- Pandas -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="pandas">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -751,14 +809,14 @@
         <div class="category-group-header">
           <div class="category-group-title">
             <span style="font-size: 22px;">💼</span>
-            <h3>MICROSOFT OFFICE &amp; PRODUCTIVITY <span style="font-size: 12px; font-family: var(--font-mono); color: var(--neon-sky);">(5 Tools)</span></h3>
+            <h3>MICROSOFT OFFICE &amp; PRODUCTIVITY <span style="font-size: 12px; font-family: var(--font-mono); color: var(--sky-core);">(5 Tools)</span></h3>
           </div>
           <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">DOCUMENTS • SPREADSHEETS • PRESENTATIONS • DATABASES • WORKFLOWS</span>
         </div>
 
         <div class="skills-grid-4">
           <!-- Microsoft Word -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="word">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -779,7 +837,7 @@
           </div>
 
           <!-- Microsoft Excel -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="excel">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -800,7 +858,7 @@
           </div>
 
           <!-- Microsoft PowerPoint -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="powerpoint">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -821,7 +879,7 @@
           </div>
 
           <!-- Microsoft Access -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="access">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -842,7 +900,7 @@
           </div>
 
           <!-- Microsoft Outlook -->
-          <div class="skill-card-3d">
+          <div class="skill-card-3d" data-skill="outlook">
             <div>
               <div class="skill-card-top">
                 <div class="skill-logo-wrap">
@@ -866,223 +924,284 @@
     </div>
   </section>
 
-  <!-- ================= PROJECTS SECTION ================= -->
+  <!-- ================= 3D PROJECTS SECTION (LIVE GITHUB REPOSITORIES) ================= -->
   <section id="projects" class="section">
     <div class="container">
       <div class="section-head">
-        <div class="badge-pill">PORTFOLIO WORK</div>
-        <h2>FEATURED <span class="gradient-text-cyan">PROJECTS</span></h2>
-        <p>Selected engineering systems, full-stack applications, and specialized software architectures.</p>
+        <div class="badge-pill">GITHUB REPOSITORIES</div>
+        <h2>MY GITHUB <span class="gradient-text-cyan">PROJECTS</span></h2>
+        <p>Live synchronized public repositories directly from Usman Shah's GitHub account (<a href="https://github.com/US-development-9" target="_blank" rel="noopener noreferrer" style="color: var(--cyan-core); text-decoration: underline;">@US-development-9</a>). Any new repository added to GitHub automatically appears here.</p>
+        
+        <!-- Live GitHub Sync Telemetry Bar -->
+        <div class="github-sync-status-bar">
+          <span class="live-sync-indicator"><span class="status-dot"></span> LIVE GITHUB SYNC</span>
+          <span id="repo-count-badge" class="badge-pill" style="font-size: 10px;">CONNECTING TO GITHUB...</span>
+          <button id="sync-github-btn" class="sync-refresh-btn" type="button" title="Fetch fresh repositories from GitHub API">
+            <svg id="sync-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+            </svg>
+            <span>SYNC NOW</span>
+          </button>
+        </div>
       </div>
 
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="glass-card project-card">
-          <div>
-            <div class="project-card-header">
-              <span class="badge-pill" style="font-size: 10px;">WEB / SAAS</span>
-              <span style="font-size: 11px; font-family: var(--font-mono); color: var(--neon-cyan);">★ 680</span>
-            </div>
-            <h3>OmniFlow Workspace</h3>
-            <p>Real-time collaborative workspace with conflict-free CRDT document editing, live cursor broadcasting, and role-based permissions.</p>
-          </div>
-          <div>
-            <div class="project-tags">
-              <span class="skill-tag-item">Next.js</span>
-              <span class="skill-tag-item">TypeScript</span>
-              <span class="skill-tag-item">PostgreSQL</span>
-              <span class="skill-tag-item">WebSockets</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/US-development-9" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 11px;">VIEW CODE</a>
-            </div>
-          </div>
-        </div>
+      <!-- Project Category Filters -->
+      <div class="projects-filter-bar" id="projects-filter-bar">
+        <button class="project-tab-btn active" data-cat="all">ALL REPOSITORIES</button>
+      </div>
 
-        <!-- Project 2 -->
-        <div class="glass-card project-card">
-          <div>
-            <div class="project-card-header">
-              <span class="badge-pill" style="font-size: 10px;">MOBILE APP</span>
-              <span style="font-size: 11px; font-family: var(--font-mono); color: var(--neon-purple);">★ 490</span>
-            </div>
-            <h3>PulseFit Mobile Tracker</h3>
-            <p>Cross-platform Flutter mobile application featuring real-time health telemetry ingestion, biometric charts, and offline-first SQLite sync.</p>
-          </div>
-          <div>
-            <div class="project-tags">
-              <span class="skill-tag-item">Flutter</span>
-              <span class="skill-tag-item">Dart</span>
-              <span class="skill-tag-item">Riverpod</span>
-              <span class="skill-tag-item">SQLite</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/US-development-9" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 11px;">VIEW CODE</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="glass-card project-card">
-          <div>
-            <div class="project-card-header">
-              <span class="badge-pill" style="font-size: 10px;">PYTHON / API</span>
-              <span style="font-size: 11px; font-family: var(--font-mono); color: var(--neon-emerald);">★ 760</span>
-            </div>
-            <h3>Nexus Telemetry Engine</h3>
-            <p>High-throughput telemetry ingestion and analytical processing service built with FastAPI, Pandas, and asynchronous event pipelines.</p>
-          </div>
-          <div>
-            <div class="project-tags">
-              <span class="skill-tag-item">Python</span>
-              <span class="skill-tag-item">FastAPI</span>
-              <span class="skill-tag-item">Pandas</span>
-              <span class="skill-tag-item">NumPy</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/US-development-9" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 11px;">VIEW CODE</a>
-            </div>
-          </div>
+      <!-- Dynamic GitHub Repositories 3D Grid -->
+      <div class="projects-grid-3d" id="projects-grid">
+        <!-- Injected dynamically from GitHub API via script.js -->
+        <div class="glass-card" style="grid-column: 1 / -1; text-align: center; padding: 48px 24px;">
+          <span class="status-dot" style="margin-bottom: 14px; display: inline-block;"></span>
+          <h4 style="color: #fff; margin-bottom: 8px; font-size: 18px;">Connecting to GitHub API...</h4>
+          <p style="font-size: 13.5px; color: var(--text-muted);">Fetching repositories for @US-development-9</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= EXPERIENCE SECTION ================= -->
-  <section id="experience" class="section" style="background: rgba(4, 6, 17, 0.6);">
+  <!-- ================= 3D TIMELINE (EXPERIENCE & EDUCATION) ================= -->
+  <section id="experience" class="section" style="background: rgba(4, 7, 20, 0.6);">
     <div class="container">
       <div class="section-head">
-        <div class="badge-pill">CAREER TIMELINE</div>
+        <div class="badge-pill">CAREER MILESTONES</div>
         <h2>EXPERIENCE &amp; <span class="gradient-text-cyan">EDUCATION</span></h2>
-        <p>A proven track record of software architecture, full-stack systems, and continuous technical growth.</p>
+        <p>A proven track record of software architecture, full-stack systems, and continuous computer science advancement.</p>
       </div>
 
-      <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
-        <div class="glass-card" style="padding: 24px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-            <h3 style="font-size: 18px; color: #fff;">Lead Software Engineer &amp; Full-Stack Architect</h3>
-            <span class="badge-pill" style="font-size: 10px;">2023 — PRESENT</span>
+      <div class="timeline-track">
+        <!-- Milestone 1 -->
+        <div class="timeline-item">
+          <div class="timeline-milestone-marker">
+            <div class="timeline-marker-inner"></div>
           </div>
-          <div style="font-size: 12px; font-family: var(--font-mono); color: var(--neon-cyan); margin-bottom: 12px;">ENGINEERING SOLUTIONS // ISLAMABAD / REMOTE</div>
-          <p style="font-size: 13.5px; color: #cbd5e1; line-height: 1.6;">
-            Architecting responsive web applications, mobile app prototypes, and automated data pipelines. Implemented high-throughput REST APIs, reducing latency by over 35%.
-          </p>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <div>
+                <h3>Lead Software Engineer &amp; Full-Stack Architect</h3>
+                <div class="timeline-company">ENGINEERING SOLUTIONS // ISLAMABAD / REMOTE</div>
+              </div>
+              <span class="badge-pill" style="font-size: 10px;">2023 — PRESENT</span>
+            </div>
+            <p style="font-size: 14px; color: #cbd5e1; line-height: 1.7; margin-bottom: 14px;">
+              Architecting responsive web applications, mobile app prototypes, and automated data pipelines. Implemented high-throughput REST APIs, reducing latency by over 35%. Mentored engineering squads in clean code patterns, test-driven development, and CI/CD pipelines.
+            </p>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Full-Stack Architecture</span>
+              <span class="skill-tag-item">React &amp; Next.js</span>
+              <span class="skill-tag-item">Flutter &amp; Kotlin</span>
+              <span class="skill-tag-item">FastAPI</span>
+            </div>
+          </div>
         </div>
 
-        <div class="glass-card" style="padding: 24px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-            <h3 style="font-size: 18px; color: #fff;">B.S. in Computer Science</h3>
-            <span class="badge-pill" style="font-size: 10px;">GRADUATED</span>
+        <!-- Milestone 2 -->
+        <div class="timeline-item">
+          <div class="timeline-milestone-marker">
+            <div class="timeline-marker-inner"></div>
           </div>
-          <div style="font-size: 12px; font-family: var(--font-mono); color: var(--neon-purple); margin-bottom: 12px;">DEPARTMENT OF COMPUTER SCIENCE</div>
-          <p style="font-size: 13.5px; color: #cbd5e1; line-height: 1.6;">
-            In-depth academic rigor in Data Structures &amp; Algorithms, Database Systems, Object-Oriented Software Design, Operating Systems, and Distributed Architectures.
-          </p>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <div>
+                <h3>Senior Systems Architect &amp; 3D Web Engineer</h3>
+                <div class="timeline-company">VORTEX INTERACTIVE STUDIOS // REMOTE</div>
+              </div>
+              <span class="badge-pill" style="font-size: 10px;">2022 — 2024</span>
+            </div>
+            <p style="font-size: 14px; color: #cbd5e1; line-height: 1.7; margin-bottom: 14px;">
+              Led development of immersive browser-based 3D digital simulation tools and interactive data visualization suites utilizing Three.js and WebGL. Engineered GPU-optimized custom WebGL shader pipelines maintaining steady 60 FPS across mobile and desktop.
+            </p>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Three.js</span>
+              <span class="skill-tag-item">WebGL Shaders</span>
+              <span class="skill-tag-item">TypeScript</span>
+              <span class="skill-tag-item">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 3: Education -->
+        <div class="timeline-item edu">
+          <div class="timeline-milestone-marker">
+            <div class="timeline-marker-inner"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <div>
+                <h3>B.S. in Computer Science</h3>
+                <div class="timeline-company" style="color: var(--purple-core);">DEPARTMENT OF COMPUTER SCIENCE</div>
+              </div>
+              <span class="badge-pill" style="font-size: 10px; color: var(--purple-core); border-color: rgba(168, 85, 247, 0.4); background: rgba(168, 85, 247, 0.1);">GRADUATED</span>
+            </div>
+            <p style="font-size: 14px; color: #cbd5e1; line-height: 1.7; margin-bottom: 14px;">
+              Comprehensive academic rigor in theoretical computer science, Data Structures &amp; Algorithms, Database Systems, Object-Oriented Software Design, Operating Systems, Compilers, and Distributed Systems.
+            </p>
+            <div class="skill-tags-row">
+              <span class="skill-tag-item">Algorithms &amp; Complexity</span>
+              <span class="skill-tag-item">Database Systems</span>
+              <span class="skill-tag-item">Operating Systems</span>
+              <span class="skill-tag-item">Computer Graphics</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= SERVICES SECTION ================= -->
+  <!-- ================= SERVICES MATRIX ================= -->
   <section id="services" class="section">
     <div class="container">
       <div class="section-head">
         <div class="badge-pill">OFFERINGS</div>
-        <h2>TECHNICAL <span class="gradient-text-cyan">SERVICES</span></h2>
+        <h2>TECHNICAL SERVICES &amp; <span class="gradient-text-cyan">CONSULTING</span></h2>
         <p>End-to-end consulting and custom software development tailored to modern production standards.</p>
       </div>
 
-      <div class="skills-grid-4" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
-        <div class="glass-card" style="padding: 26px;">
-          <div style="font-size: 28px; margin-bottom: 12px;">🌐</div>
-          <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px;">Full-Stack Web Development</h3>
-          <p style="font-size: 13px; color: var(--text-secondary);">Custom reactive web apps, responsive design systems, Next.js SSR, and secure RESTful backend APIs.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon-box">🌐</div>
+          <h3>Full-Stack Web Development</h3>
+          <p>Custom reactive web apps, responsive design systems, Next.js SSR, and secure RESTful backend APIs.</p>
         </div>
 
-        <div class="glass-card" style="padding: 26px;">
-          <div style="font-size: 28px; margin-bottom: 12px;">📱</div>
-          <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px;">Mobile App Engineering</h3>
-          <p style="font-size: 13px; color: var(--text-secondary);">Native Android (Kotlin/Java) and cross-platform iOS &amp; Android development with Flutter and React Native.</p>
+        <div class="service-card">
+          <div class="service-icon-box" style="color: var(--purple-core); border-color: rgba(168, 85, 247, 0.3); background: rgba(168, 85, 247, 0.08);">📱</div>
+          <h3>Mobile App Engineering</h3>
+          <p>Native Android (Kotlin/Java) and cross-platform iOS &amp; Android development with Flutter and React Native.</p>
         </div>
 
-        <div class="glass-card" style="padding: 26px;">
-          <div style="font-size: 28px; margin-bottom: 12px;">🐍</div>
-          <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px;">Python Backend &amp; Data</h3>
-          <p style="font-size: 13px; color: var(--text-secondary);">High-speed microservices with FastAPI, Django web portals, automated scraping, and NumPy/Pandas data processing.</p>
+        <div class="service-card">
+          <div class="service-icon-box" style="color: var(--emerald-core); border-color: rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.08);">🐍</div>
+          <h3>Python Backend &amp; Data</h3>
+          <p>High-speed microservices with FastAPI, Django web portals, automated scraping, and NumPy/Pandas data processing.</p>
         </div>
 
-        <div class="glass-card" style="padding: 26px;">
-          <div style="font-size: 28px; margin-bottom: 12px;">💼</div>
-          <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px;">Office &amp; Database Automation</h3>
-          <p style="font-size: 13px; color: var(--text-secondary);">Advanced Excel financial models, Access database schemas, executive PowerPoint decks, and workflow optimization.</p>
+        <div class="service-card">
+          <div class="service-icon-box" style="color: var(--sky-core); border-color: rgba(56, 189, 248, 0.3); background: rgba(56, 189, 248, 0.08);">💼</div>
+          <h3>Office &amp; Database Automation</h3>
+          <p>Advanced Excel financial models, Access database schemas, executive PowerPoint decks, and workflow optimization.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">🧠</div>
+          <h3>Intelligent AI &amp; ML Solutions</h3>
+          <p>Custom machine learning inference servers, vector search embeddings, automated NLP classification, and predictive workflows.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box" style="color: var(--purple-core); border-color: rgba(168, 85, 247, 0.3); background: rgba(168, 85, 247, 0.08);">📦</div>
+          <h3>3D Graphics &amp; Interactive WebGL</h3>
+          <p>Cinematic browser 3D experiences, custom GLSL shaders, spatial product showcases, and interactive physics simulations.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box" style="color: var(--emerald-core); border-color: rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.08);">☁️</div>
+          <h3>Cloud &amp; Distributed Architecture</h3>
+          <p>Fault-tolerant microservices, Docker containerization, automated CI/CD pipelines, and high-availability cloud setups.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box" style="color: var(--sky-core); border-color: rgba(56, 189, 248, 0.3); background: rgba(56, 189, 248, 0.08);">🗄️</div>
+          <h3>Database Design &amp; Optimization</h3>
+          <p>Resilient relational and NoSQL schemas, query indexing, caching strategies, and sub-millisecond query optimization.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">🛡️</div>
+          <h3>Cybersecurity &amp; Zero-Trust</h3>
+          <p>Cryptographic authentication, OAuth2/OIDC protocols, OWASP hardening, API rate limiting, and security audits.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box" style="color: var(--purple-core); border-color: rgba(168, 85, 247, 0.3); background: rgba(168, 85, 247, 0.08);">🎮</div>
+          <h3>Game Development &amp; Physics</h3>
+          <p>2D and 3D games in WebGL/Three.js with collision mathematics, spatial 3D audio, and responsive gamepad controls.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box" style="color: var(--emerald-core); border-color: rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.08);">📊</div>
+          <h3>Data Analytics Dashboards</h3>
+          <p>Transforming complex telemetry streams into real-time KPI dashboards, executive summaries, and interactive canvas charts.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box" style="color: var(--sky-core); border-color: rgba(56, 189, 248, 0.3); background: rgba(56, 189, 248, 0.08);">⚡</div>
+          <h3>High-Speed APIs &amp; Microservices</h3>
+          <p>Lightning-fast RESTful and gRPC endpoints with automated Swagger documentation, input validation, and telemetry tracing.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ================= CONTACT SECTION ================= -->
-  <section id="contact" class="section" style="background: rgba(4, 6, 17, 0.7);">
+  <section id="contact" class="section" style="background: rgba(3, 6, 18, 0.85);">
     <div class="container">
       <div class="section-head">
-        <div class="badge-pill">GET IN TOUCH</div>
-        <h2>LET&rsquo;S WORK <span class="gradient-text-cyan">TOGETHER</span></h2>
-        <p>Have an engineering project, mobile app, or consulting inquiry? Reach out directly via WhatsApp, Gmail, or the contact form.</p>
+        <div class="badge-pill">DIRECT COMMUNICATION</div>
+        <h2>LET&rsquo;S BUILD SOMETHING <span class="gradient-text-cyan">EXTRAORDINARY</span></h2>
+        <p>Have an engineering project, mobile app, or consulting inquiry? Reach out directly via WhatsApp, Gmail, or dispatch an instant message below.</p>
       </div>
 
       <div class="contact-grid">
-        <div>
-          <h3 style="font-size: 22px; color: #fff; margin-bottom: 12px;">Direct Contact Channels</h3>
-          <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
-            I respond quickly to direct inquiries on WhatsApp and Gmail. Feel free to connect to discuss project scopes and technical consulting.
+        <!-- Direct Channels -->
+        <div class="contact-info-panel">
+          <h3 style="font-size: 22px; color: #fff; margin-bottom: 6px;">Verified Contact Channels</h3>
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px;">
+            I respond rapidly to inquiries on WhatsApp and Gmail. Connect anytime to discuss project scopes, timelines, and technical consulting.
           </p>
 
-          <div class="contact-info-list">
-            <!-- WhatsApp -->
-            <a href="https://wa.me/923444257911?text=Hi%20Usman%20Shah%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20talk%20with%20you." target="_blank" class="contact-item-card">
-              <div class="contact-icon-box" style="color: #25D366; border-color: rgba(37, 211, 102, 0.4); background: rgba(37, 211, 102, 0.1);">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.76 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.68 12.04 3.68C14.25 3.68 16.31 4.54 17.87 6.1C19.42 7.66 20.28 9.72 20.28 11.93C20.28 16.47 16.59 20.15 12.05 20.15ZM16.56 14.39C16.31 14.27 15.09 13.67 14.86 13.59C14.63 13.5 14.47 13.46 14.3 13.71C14.14 13.96 13.68 14.5 13.54 14.66C13.4 14.83 13.26 14.85 13.01 14.73C12.76 14.61 11.96 14.34 11.01 13.49C10.27 12.83 9.77 12.01 9.63 11.76C9.48 11.51 9.61 11.38 9.74 11.26C9.85 11.15 9.99 10.97 10.12 10.82C10.24 10.68 10.28 10.58 10.36 10.41C10.45 10.24 10.41 10.1 10.35 9.98C10.28 9.85 9.83 8.74 9.64 8.29C9.46 7.85 9.27 7.91 9.13 7.9C9 7.89 8.84 7.89 8.67 7.89C8.51 7.89 8.24 7.95 8.01 8.2C7.79 8.45 7.15 9.05 7.15 10.27C7.15 11.49 8.04 12.67 8.16 12.83C8.28 13 9.91 15.51 12.4 16.58C12.99 16.84 13.45 16.99 13.81 17.11C14.41 17.3 14.95 17.27 15.38 17.21C15.86 17.14 16.86 16.6 17.07 16.02C17.27 15.45 17.27 14.95 17.21 14.85C17.15 14.75 16.81 14.51 16.56 14.39Z"/>
-                </svg>
-              </div>
-              <div>
-                <div style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">WHATSAPP CHAT</div>
-                <div style="font-size: 15px; font-weight: 700; color: #fff;">+92 344 4257911</div>
-              </div>
-            </a>
+          <!-- WhatsApp Card -->
+          <a href="https://wa.me/923444257911?text=Hi%20Usman%20Shah%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20talk%20with%20you." target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+            <div class="contact-icon-box" style="color: #25D366; background: rgba(37, 211, 102, 0.1); border: 1px solid rgba(37, 211, 102, 0.3);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.76 7.85 19L7.55 18.82L4.43 19.64L5.26 16.6L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.68 12.04 3.68C14.25 3.68 16.31 4.54 17.87 6.1C19.42 7.66 20.28 9.72 20.28 11.93C20.28 16.47 16.59 20.15 12.05 20.15ZM16.56 14.39C16.31 14.27 15.09 13.67 14.86 13.59C14.63 13.5 14.47 13.46 14.3 13.71C14.14 13.96 13.68 14.5 13.54 14.66C13.4 14.83 13.26 14.85 13.01 14.73C12.76 14.61 11.96 14.34 11.01 13.49C10.27 12.83 9.77 12.01 9.63 11.76C9.48 11.51 9.61 11.38 9.74 11.26C9.85 11.15 9.99 10.97 10.12 10.82C10.24 10.68 10.28 10.58 10.36 10.41C10.45 10.24 10.41 10.1 10.35 9.98C10.28 9.85 9.83 8.74 9.64 8.29C9.46 7.85 9.27 7.91 9.13 7.9C9 7.89 8.84 7.89 8.67 7.89C8.51 7.89 8.24 7.95 8.01 8.2C7.79 8.45 7.15 9.05 7.15 10.27C7.15 11.49 8.04 12.67 8.16 12.83C8.28 13 9.91 15.51 12.4 16.58C12.99 16.84 13.45 16.99 13.81 17.11C14.41 17.3 14.95 17.27 15.38 17.21C15.86 17.14 16.86 16.6 17.07 16.02C17.27 15.45 17.27 14.95 17.21 14.85C17.15 14.75 16.81 14.51 16.56 14.39Z"/>
+              </svg>
+            </div>
+            <div class="contact-channel-info">
+              <div class="contact-channel-label">WHATSAPP DIRECT CHAT</div>
+              <div class="contact-channel-val">+92 344 4257911</div>
+            </div>
+            <button type="button" class="contact-copy-btn" onclick="copyToClipboard('+923444257911', 'Phone number copied to clipboard!')">COPY</button>
+          </a>
 
-            <!-- Gmail -->
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mianusmanshah06@gmail.com" target="_blank" class="contact-item-card">
-              <div class="contact-icon-box" style="color: #EA4335; border-color: rgba(234, 67, 53, 0.4); background: rgba(234, 67, 53, 0.1);">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-              </div>
-              <div>
-                <div style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">GMAIL INBOX</div>
-                <div style="font-size: 15px; font-weight: 700; color: #fff;">mianusmanshah06@gmail.com</div>
-              </div>
-            </a>
+          <!-- Gmail Card -->
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mianusmanshah06@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+            <div class="contact-icon-box" style="color: #EA4335; background: rgba(234, 67, 53, 0.1); border: 1px solid rgba(234, 67, 53, 0.3);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-channel-info">
+              <div class="contact-channel-label">GMAIL INBOX (DIRECT COMPOSE)</div>
+              <div class="contact-channel-val">mianusmanshah06@gmail.com</div>
+            </div>
+            <button type="button" class="contact-copy-btn" onclick="copyToClipboard('mianusmanshah06@gmail.com', 'Email copied to clipboard!')">COPY</button>
+          </a>
 
-            <!-- GitHub -->
-            <a href="https://github.com/US-development-9" target="_blank" class="contact-item-card">
-              <div class="contact-icon-box">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                </svg>
-              </div>
-              <div>
-                <div style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">GITHUB PROFILE</div>
-                <div style="font-size: 15px; font-weight: 700; color: #fff;">@US-development-9</div>
-              </div>
-            </a>
-          </div>
+          <!-- GitHub Card -->
+          <a href="https://github.com/US-development-9" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+            <div class="contact-icon-box" style="color: #fff; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </div>
+            <div class="contact-channel-info">
+              <div class="contact-channel-label">GITHUB REPOSITORIES</div>
+              <div class="contact-channel-val">@US-development-9</div>
+            </div>
+            <button type="button" class="contact-copy-btn" onclick="copyToClipboard('https://github.com/US-development-9', 'GitHub URL copied to clipboard!')">COPY</button>
+          </a>
         </div>
 
         <!-- Interactive Direct Dispatch Form -->
-        <form id="portfolio-contact-form" class="contact-form">
-          <h3 style="font-size: 18px; color: #fff; margin-bottom: 4px;">Direct Message Dispatch</h3>
-          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">Sends your message directly to Usman Shah via WhatsApp.</p>
+        <form id="portfolio-contact-form" class="contact-form-card">
+          <h3 style="font-size: 20px; color: #fff; margin-bottom: 4px;">Direct Message Dispatch</h3>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 24px;">
+            Formats and automatically dispatches your message directly to Usman Shah via WhatsApp.
+          </p>
 
           <div class="form-group">
             <label for="contact-name">Your Full Name</label>
@@ -1095,13 +1214,13 @@
           </div>
 
           <div class="form-group">
-            <label for="contact-message">Project Details / Message</label>
-            <textarea id="contact-message" rows="4" placeholder="Describe your project, timeline, or inquiry..." required></textarea>
+            <label for="contact-message">Project Scope &amp; Details</label>
+            <textarea id="contact-message" rows="4" placeholder="Describe your web app, mobile architecture, or consulting inquiry..." required></textarea>
           </div>
 
-          <button type="submit" class="btn-primary" style="justify-content: center; width: 100%;">
+          <button type="submit" class="btn-primary" style="justify-content: center; width: 100%; padding: 14px;">
             <span>DISPATCH TO WHATSAPP</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="22" y1="2" x2="11" y2="13"></line>
               <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
             </svg>
@@ -1114,16 +1233,48 @@
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="brand-text-title" style="font-size: 18px;">
-        USMAN SHAH<span style="color: var(--neon-cyan);">.DEV</span>
+      <div class="brand-meta footer-brand-meta">
+        <div class="footer-brand-row">
+          <div class="brand-monogram-stage" style="width: 36px; height: 36px;">
+            <svg class="brand-us-svg" width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="4" y="4" width="92" height="92" rx="22" fill="#070d24" stroke="rgba(0, 240, 255, 0.3)" stroke-width="2" />
+              <path d="M22 22 L34 22 L34 57 C34 65 41 69 50 69 C59 69 66 65 66 57 L66 44 L78 44 L78 58 C78 72 65 81 50 81 C35 81 22 72 22 58 Z" fill="#94a3b8" />
+              <path d="M78 22 L44 22 C34 22 28 27 28 35 C28 43 35 46 44 48 L56 50 C65 52 70 55 70 62 C70 70 62 74 52 74 L34 74 L34 65 L50 65 C55 65 58 63 58 60 C58 56 54 54 46 52 L36 50 C26 47 18 42 18 32 C18 22 28 15 42 15 L78 15 Z" fill="#00f0ff" />
+              <circle cx="50" cy="50" r="3" fill="#ffffff" />
+            </svg>
+          </div>
+          <span class="brand-wordmark" style="font-size: 19px;">USMAN<span style="color: var(--cyan-core);">.DEV</span></span>
+        </div>
+        <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted); letter-spacing: 0.08em;">
+          SOFTWARE ENGINEER • COMPUTER SCIENTIST
+        </span>
       </div>
       <p class="footer-copy">
-        &copy; 2026 Usman Shah. Engineered with high-performance web architecture. All rights reserved.
+        &copy; 2026 Usman Shah. Engineered with high-performance 3D web architecture. All rights reserved.
       </p>
     </div>
   </footer>
 
-  <!-- Functionality Script (File 3) -->
+  <!-- ================= PROJECT ARCHITECTURE DETAIL MODAL ================= -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <div id="modal-content">
+        <!-- Injected dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= INTERACTIVE TOAST NOTICE ================= -->
+  <div class="toast-notice" id="toast-notice" aria-live="polite">
+    <span id="toast-icon">✓</span>
+    <span id="toast-text">Notification</span>
+  </div>
+
+  <!-- Three.js 3D WebGL Engine (Offline-Safe Local File) -->
+  <script src="three.min.js"></script>
+
+  <!-- High-Performance Portfolio Logic (Script 3) -->
   <script src="script.js"></script>
 </body>
 </html>
